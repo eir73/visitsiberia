@@ -8,10 +8,11 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  cursor: default;
 }
 
 main {
-  color: $text-dark;
+  color: $dark-blue;
 }
 
 .material-icons {
@@ -19,8 +20,20 @@ main {
 }
 
 button, input, textarea {
+  border: none !important;
+
   &:focus {
-    border: none;
+    border: none !important;
     outline: none !important;
+  }
+}
+
+a {
+  transition: opacity ease 0.5s;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.65;
   }
 }

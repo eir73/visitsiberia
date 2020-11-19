@@ -3,7 +3,7 @@
   background-color: #ffffff;
 
   @media screen and (max-width: 1199px) {
-    padding: 14px;
+    padding: 14px 0px;
   }
 }
 
@@ -11,19 +11,23 @@
   &-item {
     padding-left: 7px;
     padding-right: 7px;
+
+    @media screen and (max-width: 1100px) {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
   }
 
   &-link {
+    font-weight: normal;
     font-size: 24px;
     line-height: 30px;
-    color: $text-dark;
-
-    transition: opacity ease 0.5s;
-
-    &:hover {
-      color: $text-dark;
-      opacity: 0.65;
-    }
+    color: $dark-blue;
 
     &.active {
       text-decoration: line-through;
