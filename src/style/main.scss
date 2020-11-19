@@ -1,0 +1,26 @@
+@import "vars.scss";
+@import "header.scss";
+@import "footer.scss";
+
+.exo {
+  font-family: 'Exo 2', sans-serif;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  color: $text-dark;
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+button, input, textarea {
+  &:focus {
+    border: none;
+    outline: none !important;
+  }
+}
