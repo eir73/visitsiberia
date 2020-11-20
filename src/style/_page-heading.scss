@@ -1,0 +1,86 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 620px;
+  padding: 0 55px;
+  color: $dark-blue;
+
+  &__title {
+    margin-bottom: 62px;
+    font-weight: 200;
+    font-size: 120px;
+    line-height: 144px;
+  }
+
+  &__selects {
+    display: flex;
+    justify-content: space-between;
+    min-width: 942px;
+    height: 38px;
+    margin-bottom: 62px;
+  }
+
+  &__button {
+    width: 352px;
+    padding: 18px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: $text-light;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: $dark-blue;
+  }
+
+  &--yellow {
+    background: linear-gradient(to bottom right, #f8fd10 0%, #ffffff 50%) bottom right,
+      linear-gradient(to bottom left, #f8fd10 0%, #ffffff 50%) bottom left,
+      linear-gradient(to top left, #f8fd10 0%, #ffffff 50%) top left,
+      linear-gradient(to top right, #f8fd10 0%, #ffffff 50%) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--blue {
+    background: linear-gradient(to bottom right, #599cc1 0%, #ffffff 50%) bottom
+        right,
+      linear-gradient(to bottom left, #599cc1 0%, #ffffff 50%) bottom left,
+      linear-gradient(to top left, #599cc1 0%, #ffffff 50%) top left,
+      linear-gradient(to top right, #599cc1 0%, #ffffff 50%) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--green {
+    background: linear-gradient(to bottom right, #78fd10 0%, #ffffff 50%) bottom
+        right,
+      linear-gradient(to bottom left, #78fd10 0%, #ffffff 50%) bottom left,
+      linear-gradient(to top left, #78fd10 0%, #ffffff 50%) top left,
+      linear-gradient(to top right, #78fd10 0%, #ffffff 50%) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--cyan {
+    background: linear-gradient(to bottom right, #10fde1 0%, #ffffff 50%) bottom
+        right,
+      linear-gradient(to bottom left, #10fde1 0%, #ffffff 50%) bottom left,
+      linear-gradient(to top left, #10fde1 0%, #ffffff 50%) top left,
+      linear-gradient(to top right, #10fde1 0%, #ffffff 50%) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--pink {
+    background: linear-gradient(to bottom right, #fd10bb 0%, #ffffff 50%) bottom
+        right,
+      linear-gradient(to bottom left, #fd10bb 0%, #ffffff 50%) bottom left,
+      linear-gradient(to top left, #fd10bb 0%, #ffffff 50%) top left,
+      linear-gradient(to top right, #fd10bb 0%, #ffffff 50%) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}

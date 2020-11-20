@@ -30,6 +30,7 @@
     "imagemin-pngquant": "^8.0.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.4.1",
     "swiper": "^5.3.6",
     "websocket": "^1.0.28"

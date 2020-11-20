@@ -2,15 +2,17 @@
 @import "header.scss";
 @import "footer.scss";
 @import "index.scss";
+@import "page-heading";
+@import "places";
 
 .exo {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 
 body {
   min-height: 100vh;
   padding-top: 74px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   cursor: default;
 }
 
@@ -22,7 +24,9 @@ main {
   cursor: pointer;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   border: none !important;
 
   &:focus {
@@ -33,11 +37,15 @@ button, input, textarea {
 }
 
 a {
-  transition: opacity ease 0.5s;
+  cursor: pointer;
 
-  &:hover {
-    text-decoration: none;
-    color: inherit;
-    opacity: 0.65;
+  &:not(.nop) {
+    transition: opacity ease 0.5s;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.65;
+    }
   }
 }
