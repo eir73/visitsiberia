@@ -1,0 +1,100 @@
+.list {
+  width: 1394px;
+  margin: 0 auto;
+
+  &__tabs {
+    margin-bottom: 47px;
+
+    .nav-link {
+      padding: 13px 18px;
+      margin-right: 14px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      color: $dark-blue;
+      background-color: $text-light;
+      border-radius: 15px;
+
+      &.active {
+        color: $text-light;
+        background-color: $dark-blue;
+      }
+    }
+  }
+
+  &__size {
+    padding-top: 13px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: $dark-blue;
+  }
+
+  &__items {
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 404px;
+    margin-bottom: 263px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-left: 91px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 14px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 36px;
+    color: $dark-blue;
+  }
+
+  &__city {
+    margin-bottom: 22px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: $dark-blue;
+  }
+
+  &__buttons {
+    margin-bottom: 14px;
+  }
+
+  &__button {
+    border-radius: 15px;
+    background-color: #f2f6f9;
+    padding: 11px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: $dark-blue;
+
+    &-add {
+      width: 324px;
+      margin-right: 19px;
+    }
+
+    &-star {
+      width: 61px;
+    }
+
+    &-link {
+      margin-bottom: -68px;
+    }
+  }
+}
