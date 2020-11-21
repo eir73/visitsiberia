@@ -88,18 +88,45 @@
     font-size: 24px;
     line-height: 30px;
     color: $dark-blue;
+    transition: background-color ease 0.5s;
+
+    &--green {
+      background-color: #C7F2A5;
+    }
 
     &-add {
       width: 324px;
       margin-right: 19px;
+
+      &:hover {
+        background-color: #d7f5c0;
+      }
     }
 
     &-star {
       width: 61px;
+
+      svg {
+        transition: fill ease 0.5s;
+        fill: #c4c4c4;
+      }
+
+      &.active {
+        svg {
+          fill: #FFB906;
+        }
+      }
+
+      &:hover {
+        svg {
+          fill: #ffdc82;
+        }
+      }
     }
 
     &-link {
       margin-bottom: -68px;
+      background-color: #AFDBF3;
     }
   }
 }

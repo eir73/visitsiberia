@@ -6,55 +6,80 @@
   //= partials/_header.html
 
   <main class="main">
-    <div class="places d-flex flex-column">
-      <div class="places__heading heading heading--yellow">
+    <div class="places d-flex flex-column" id="places">
+      <div class="places__heading heading heading--yellow" id="heading">
         <h1 class="heading__title">Объекты</h1>
         <div class="heading__selects">
           <select class="heading__select" id="first">
-            <option disabled selected>Please pick one</option>
-            <option>Mr.</option>
-            <option>Mrs.</option>
-            <option>Dr.</option>
-            <option>Prof.</option>
-            <option>Other</option>
+            <option disabled selected>Тип отдыха:</option>
+            <option>Активно-приключенческий</option>
+            <option>Спокойный отдых</option>
+            <option>Культурно-познавательный</option>
           </select>
           <select class="heading__select" id="second">
-            <option disabled selected>Please pick one</option>
-            <option>Mr.</option>
-            <option>Mrs.</option>
-            <option>Dr.</option>
-            <option>Prof.</option>
-            <option>Other</option>
+            <option disabled selected>Сезон</option>
+            <option>Зима</option>
+            <option>Весна</option>
+            <option>Лето</option>
+            <option>Осень</option>
+            <option>Круглый год</option>
           </select>
           <select class="heading__select" id="third">
-            <option disabled selected>Please pick one</option>
-            <option>Mr.</option>
-            <option>Mrs.</option>
-            <option>Dr.</option>
-            <option>Prof.</option>
-            <option>Other</option>
+            <option disabled selected>Категория</option>
+            <option>Озера, реки и водопады</option>
+            <option>Горы и скалы</option>
+            <option>Места силы</option>
+            <option>Храмы и святыни</option>
+            <option>Парки и заповедники</option>
+            <option>Городские пространства</option>
+            <option>Музеи</option>
+            <option>Скульптура и архитектура</option>
           </select>
           <select class="heading__select" id="fourth">
-            <option disabled selected>Please pick one</option>
-            <option>Mr.</option>
-            <option>Mrs.</option>
-            <option>Dr.</option>
-            <option>Prof.</option>
-            <option>Other</option>
+            <option disabled selected>С кем</option>
+            <option>Один или вдвоем</option>
+            <option>С ребенком до 3 лет</option>
+            <option>С ребенком до 10 лет</option>
+            <option>С подростком</option>
+            <option>Вся семья</option>
+            <option>Компания от 4-х человек</option>
           </select>
         </div>
       </div>
       <script>
-        $( function() {
-          $( "#first" ).selectmenu();
-       
-          $( "#second" ).selectmenu();
-       
-          $( "#third" ).selectmenu()
-       
-          $( "#fourth" ).selectmenu();
-        } );
-        </script>
+        $(function () {
+          $("#first").selectmenu();
+
+          $("#second").selectmenu();
+
+          $("#third").selectmenu()
+
+          $("#fourth").selectmenu();
+        });
+
+
+        var el1 = $('#places'),
+          eyeBall1 = el1.find('div');
+        el1.show();
+        var x1 = window.innerWidth / 2,
+          y1 = 0;
+        var r = 10,
+          x, y, x2, y2, isEyeProcessed = false;
+        $('html').mousemove(function (e) {
+          if (!isEyeProcessed) {
+            isEyeProcessed = true;
+            var x2 = e.pageX,
+              y2 = e.pageY;
+            y = ((r * (y2 - y1)) / Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))) + y1;
+            x = (((y - y1) * (x2 - x1)) / (y2 - y1)) + x1;
+            eyeBall1.css({
+              backgroundPositionY: (y - y1 + 1) + 'px',
+              backgroundPositionX: (x - x1) + 'px'
+            });
+            isEyeProcessed = false
+          }
+        });
+      </script>
       <div class="places__items list">
         <ul class="nav nav-pills list__tabs" id="pills-tab" role="tablist">
           <li class="nav-item">
@@ -72,7 +97,8 @@
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active list__items" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="tab-pane fade show active list__items" id="pills-home" role="tabpanel"
+            aria-labelledby="pills-home-tab">
             <div class="list__item d-flex flex-column">
               <a href="#" class="d-flex flex-column nop">
                 <div class="list__img">
@@ -91,7 +117,14 @@
                   Добавить
                 </button>
                 <button class="list__button list__button-star material-icons">
-                  star
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                    fill="black" width="30px" height="30px">
+                    <g>
+                      <rect fill="none" height="24" width="24" />
+                      <path
+                        d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
+                    </g>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -101,7 +134,7 @@
                   <img src="./img/item-img.jpg" alt="">
                 </div>
                 <p href="#" class="list__name exo">
-                  Музей артефактов на вершине пика Грандиозный 
+                  Музей артефактов на вершине пика Грандиозный
                 </p>
                 <p href="#" class="list__city">
                   <span class="material-icons">room&nbsp;</span>
@@ -113,36 +146,18 @@
                   Добавить
                 </button>
                 <button class="list__button list__button-star material-icons">
-                  star
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                    fill="black" width="30px" height="30px">
+                    <g>
+                      <rect fill="none" height="24" width="24" />
+                      <path
+                        d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
+                    </g>
+                  </svg>
                 </button>
               </div>
               <a href="#" class="list__button list__button-link">
-                Перейт к маршруту
-              </a>
-            </div>
-            <div class="list__item d-flex flex-column">
-              <a href="#" class="d-flex flex-column nop">
-                <div class="list__img">
-                  <img src="./img/item-img.jpg" alt="">
-                </div>
-                <p href="#" class="list__name exo">
-                  Гостинница “Огни Енисея”
-                </p>
-                <p href="#" class="list__city">
-                  <span class="material-icons">room&nbsp;</span>
-                  с. Парная
-                </p>
-              </a>
-              <div class="list__buttons d-flex flex-row align-items-center">
-                <button class="list__button list__button-add">
-                  Добавить
-                </button>
-                <button class="list__button list__button-star material-icons">
-                  star
-                </button>
-              </div>
-              <a href="#" class="list__button list__button-link">
-                Перейт к маршруту
+                Перейти к маршруту
               </a>
             </div>
             <div class="list__item d-flex flex-column">
@@ -162,12 +177,19 @@
                 <button class="list__button list__button-add">
                   Добавить
                 </button>
-                <button class="list__button list__button-star material-icons">
-                  star
+                <button class="list__button list__button-star material-icons active">
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                    fill="black" width="30px" height="30px">
+                    <g>
+                      <rect fill="none" height="24" width="24" />
+                      <path
+                        d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
+                    </g>
+                  </svg>
                 </button>
               </div>
               <a href="#" class="list__button list__button-link">
-                Перейт к маршруту
+                Перейти к маршруту
               </a>
             </div>
             <div class="list__item d-flex flex-column">
@@ -188,11 +210,50 @@
                   Добавить
                 </button>
                 <button class="list__button list__button-star material-icons">
-                  star
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                    fill="black" width="30px" height="30px">
+                    <g>
+                      <rect fill="none" height="24" width="24" />
+                      <path
+                        d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
+                    </g>
+                  </svg>
                 </button>
               </div>
               <a href="#" class="list__button list__button-link">
-                Перейт к маршруту
+                Перейти к маршруту
+              </a>
+            </div>
+            <div class="list__item d-flex flex-column">
+              <a href="#" class="d-flex flex-column nop">
+                <div class="list__img">
+                  <img src="./img/item-img.jpg" alt="">
+                </div>
+                <p href="#" class="list__name exo">
+                  Гостинница “Огни Енисея”
+                </p>
+                <p href="#" class="list__city">
+                  <span class="material-icons">room&nbsp;</span>
+                  с. Парная
+                </p>
+              </a>
+              <div class="list__buttons d-flex flex-row align-items-center">
+                <button class="list__button list__button-add list__button--green">
+                  Добавлено<span class="material-icons">&nbsp;done</span>
+                </button>
+                <button class="list__button list__button-star material-icons">
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                    fill="black" width="30px" height="30px">
+                    <g>
+                      <rect fill="none" height="24" width="24" />
+                      <path
+                        d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <a href="#" class="list__button list__button-link">
+                Перейти к маршруту
               </a>
             </div>
           </div>
