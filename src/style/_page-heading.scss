@@ -95,6 +95,7 @@
 .ui-button {
   //@at-root: unset !important; //need to fix
   border: none !important;
+  padding: 10px 12px 10px 25px !important;
   flex-grow: 1;
   background-color: transparent !important;
   outline: none !important;
@@ -136,19 +137,36 @@
 .ui-widget.ui-widget-content {
   font-family: "Source Sans Pro", sans-serif !important;
   font-family: inherit;
+  padding-bottom: 5px;
   border: none !important;
   outline: none !important;
   border-bottom-right-radius: 15px !important;
   border-bottom-left-radius: 15px !important;
   background-color: $text-light !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+/*
+.ui-selectmenu-open {
+  max-width: 336px;
+  max-height: 224px;
+  padding-bottom: 10px;
+  border-bottom-right-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+  background-color: $text-light !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}*/
+
+.ui-menu .ui-menu-item-wrapper {
+  
+  padding-left: 25px !important;
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active,
 .ui-menu .ui-menu-item {
   font-weight: 600 !important;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 25px;
   color: $dark-blue !important;
   border: none !important;
   outline: none !important;
