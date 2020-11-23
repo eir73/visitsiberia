@@ -44,9 +44,68 @@
     width: 404px;
     margin-bottom: 263px;
 
-    &:last-child {
-      margin-right: auto;
-      margin-left: 91px;
+    &-sign {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      display: none;
+    }
+
+    &.active {
+      .list__item-sign {
+        display: block;
+      }
+    }
+  }
+
+  &__sub {
+
+    &info {
+      margin-bottom: 12px;
+    }
+    &price {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px;
+      color: $dark-blue;      
+    }
+
+    &rating[data-rating="1"] .material-icons,
+    &rating[data-rating="2"] .material-icons,
+    &rating[data-rating="3"] .material-icons,
+    &rating[data-rating="4"] .material-icons,
+    &rating[data-rating="5"] .material-icons {
+      color: #c4c4c4;
+  
+      &:first-child {
+        color: #FFB906;
+      }
+    }
+    &rating[data-rating="2"] .material-icons,
+    &rating[data-rating="3"] .material-icons,
+    &rating[data-rating="4"] .material-icons,
+    &rating[data-rating="5"] .material-icons {
+      &:nth-child(2) {
+        color: #FFB906 !important;
+      }
+    }
+    &rating[data-rating="3"] .material-icons,
+    &rating[data-rating="4"] .material-icons,
+    &rating[data-rating="5"] .material-icons {
+      &:nth-child(3) {
+        color: #FFB906 !important;
+      }
+    }
+    &rating[data-rating="4"] .material-icons,
+    &rating[data-rating="5"] .material-icons {
+      &:nth-child(4) {
+        color: #FFB906 !important;
+      }
+    }
+    &rating[data-rating="5"] .material-icons {
+      &:nth-child(5) {
+        color: #FFB906 !important;
+      }
     }
   }
 
@@ -80,9 +139,12 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
     border-radius: 15px;
     background-color: #f2f6f9;
-    padding: 11px;
     text-align: center;
     font-weight: normal;
     font-size: 24px;
