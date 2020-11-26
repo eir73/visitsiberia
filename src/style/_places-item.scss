@@ -1,16 +1,40 @@
-@import "./vars";
-
 .article {
   color: $dark-blue;
   padding-bottom: 354px;
+
+  &__header-wr {
+    padding: 0 95px;
+
+    @media screen and (max-width: 1608px) {
+      padding: 0 20px;
+    }
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    top: calc(50% - 55px);
+  }
 
   &__header {
     display: flex;
     justify-content: space-between;
 
-    max-width: 1608px;
+    min-width: 1441px;
+    max-width: 1518px;
+    width: 100%;
 
-    margin: 142px 95px 0 217px;
+    margin: 142px auto 0 auto;
+
+    @media screen and (max-width: 1608px) {
+      min-width: unset;
+    }
   }
 
   &__title {
@@ -19,6 +43,10 @@
     font-size: 72px;
     font-weight: 200;
     text-shadow: 0 4px 4px rgba($color: black, $alpha: 0.25);
+  }
+
+  &__description {
+    flex-grow: 1;
   }
 
   &__recommendation {
@@ -44,6 +72,11 @@
     &-bold {
       font-weight: 600;
     }
+
+    @media screen and (max-width: 1608px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__link {
@@ -58,11 +91,20 @@
 
   &__block {
     margin-top: 305px;
+    padding-left: 20px;
   }
 
   &__info {
    max-width: 1332px;
    margin: 305px auto 0;
+  }
+
+  &__img-wr {
+    max-width: 1332px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -84,11 +126,49 @@
     display: block;
   }
 
+  &__slider {
+    position: relative;
+    max-width: 1307px;
+    padding-right: 20px;
+    margin: 305px auto;
+
+    &-container {
+      width: 1107px;
+    }
+
+    &-img-wr {
+      width: 100%;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-description {
+      margin-bottom: 15px;
+      font-weight: 200;
+      font-size: 36px;
+      line-height: 43px;
+      color: $dark-blue;
+    }
+
+    &-author  {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
   &__history {
     display: flex;
     justify-content: space-between;
+    max-width: 1585px;
+    margin-left: auto;
 
-    margin-left: 355px;
+    &-block {
+      max-width: 773px;
+    }
   }
 
   &__name {
@@ -114,14 +194,26 @@
     margin-right: 116px;
   }
 
+  &__pass {
+    @media screen and (max-width: 1608px) {
+      padding-right: 20px;
+    }
+  }
+
   &__pass-text {
     max-width: 1177px;
     margin: 0 auto 95px;
   }
 
-  &__map {
+  &__map-wrap {
+    width: 100%;
+    max-width: 1332px;
     display: block;
     margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__feedback {
