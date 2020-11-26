@@ -53,7 +53,7 @@
         });
       </script>
       <div class="route__items list">
-        <ul class="nav nav-pills list__tabs" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills list__tabs wow fadeInUp" id="pills-tab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
               aria-controls="pills-home" aria-selected="true">Список</a>
@@ -69,400 +69,282 @@
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="list__items show">
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
+          <div class="tab-pane fade show active list__sliders-wr" id="pills-home" role="tabpanel"
+            aria-labelledby="pills-home-tab">
+            <div class="list__sliders show">
+              <div class="list__slider d-flex flex-column list__slider--1 wow fadeInUp">
+                <p class="list__slider-title">Название маршрута</p>
+                <div class="swiper-container list__slider-container">
+                  <p class="list__slider-story exo">В этом активном туре по Красноярскому краю у вас появится счастливая
+                    возможность пройти самые экзотические пешеходные маршруты Сибири:</p>
+                  <div class="swiper-wrapper list__slider-wr">
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Музей артефактов на вершине пика Грандиозный
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Музей артефактов на вершине пика Грандиозный
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-scrollbar"></div>
                 </div>
               </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
+              <div class="list__slider d-flex flex-column list__slider--2 wow fadeInUp">
+                <p class="list__slider-title">Название маршрута</p>
+                <div class="swiper-container list__slider-container">
+                  <p class="list__slider-story exo">В этом активном туре по Красноярскому краю у вас появится счастливая
+                    возможность пройти самые экзотические пешеходные маршруты Сибири:</p>
+                  <div class="swiper-wrapper list__slider-wr">
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Музей артефактов на вершине пика Грандиозный
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Музей артефактов на вершине пика Грандиозный
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <p href="#" class="list__name exo">
-                    Музей артефактов на вершине пика Грандиозный
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons active">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add list__button--green">
-                    Добавлено<span class="material-icons">&nbsp;done</span>
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-scrollbar"></div>
                 </div>
               </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
+              <div class="list__slider d-flex flex-column list__slider--3 wow fadeInUp">
+                <p class="list__slider-title">Название маршрута</p>
+                <div class="swiper-container list__slider-container">
+                  <p class="list__slider-story exo">В этом активном туре по Красноярскому краю у вас появится счастливая
+                    возможность пройти самые экзотические пешеходные маршруты Сибири:</p>
+                  <div class="swiper-wrapper list__slider-wr">
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Музей артефактов на вершине пика Грандиозный
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide list__slide-wr">
+                      <div class="list__slide">
+                        <div class="list__slide-img-wr">
+                          <img src="./img/route-slider-img.jpg" alt="">
+                        </div>
+                        <a href="#" class="list__slide-name exo">
+                          Гостинница “Огни Енисея”
+                        </a>
+                        <p class="list__slide-city">
+                          <span class="material-icons">room&nbsp;</span>
+                          г. Тыва
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <p href="#" class="list__name exo">
-                    Музей артефактов на вершине пика Грандиозный
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons active">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-scrollbar"></div>
                 </div>
               </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Музей артефактов на вершине пика Грандиозный
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-              <div class="list__item d-flex flex-column">
-                <a href="#" class="d-flex flex-column nop">
-                  <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
-                  </div>
-                  <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
-                  </p>
-                  <p href="#" class="list__city">
-                    <span class="material-icons">room&nbsp;</span>
-                    с. Парная
-                  </p>
-                </a>
-                <div class="list__buttons d-flex flex-row align-items-center">
-                  <button class="list__button list__button-add">
-                    Добавить
-                  </button>
-                  <button class="list__button list__button-star material-icons active">
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
-                      fill="black" width="30px" height="30px">
-                      <g>
-                        <rect fill="none" height="24" width="24" />
-                        <path
-                          d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="list__button list__button-link">
-                  Перейти к маршруту
-                </a>
-              </div>
-            </div>
-            <div class="places__pagination pagination">
-              <div class="pagination__page active">1</div>
-              <div class="pagination__page">2</div>
-              <div class="pagination__page">3</div>
-              <div class="pagination__page">4</div>
             </div>
           </div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            map
+          <div class="places__pagination pagination">
+            <div class="pagination__page active">1</div>
+            <div class="pagination__page">2</div>
+            <div class="pagination__page">3</div>
+            <div class="pagination__page">4</div>
           </div>
         </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          map
+        </div>
       </div>
+    </div>
     </div>
   </main>
 
   //= partials/_footer.html
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      spaceBetween: 136,
+      slidesPerView: 'auto',
+      slidePrevClass: 'list__slide--prev',
+     /* pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },*/
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+        dragSize: 300,
+      },
+
+      on: {
+        init() {
+          if (this.slides.length <= 3) {
+            this.allowSlideNext = false
+            this.allowSlidePrev = false
+            this.scrollbar.el.destroy()
+          }
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

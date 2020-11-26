@@ -32,7 +32,6 @@
   }
 
   &__items {
-  
     &.show {
       display: flex;
       flex-wrap: wrap;
@@ -59,7 +58,6 @@
   }
 
   &__sub {
-
     &info {
       margin-bottom: 12px;
     }
@@ -67,7 +65,7 @@
       font-weight: normal;
       font-size: 24px;
       line-height: 30px;
-      color: $dark-blue;      
+      color: $dark-blue;
     }
 
     &rating[data-rating="1"] .material-icons,
@@ -76,9 +74,9 @@
     &rating[data-rating="4"] .material-icons,
     &rating[data-rating="5"] .material-icons {
       color: #c4c4c4;
-  
+
       &:first-child {
-        color: #FFB906;
+        color: #ffb906;
       }
     }
     &rating[data-rating="2"] .material-icons,
@@ -86,25 +84,25 @@
     &rating[data-rating="4"] .material-icons,
     &rating[data-rating="5"] .material-icons {
       &:nth-child(2) {
-        color: #FFB906 !important;
+        color: #ffb906 !important;
       }
     }
     &rating[data-rating="3"] .material-icons,
     &rating[data-rating="4"] .material-icons,
     &rating[data-rating="5"] .material-icons {
       &:nth-child(3) {
-        color: #FFB906 !important;
+        color: #ffb906 !important;
       }
     }
     &rating[data-rating="4"] .material-icons,
     &rating[data-rating="5"] .material-icons {
       &:nth-child(4) {
-        color: #FFB906 !important;
+        color: #ffb906 !important;
       }
     }
     &rating[data-rating="5"] .material-icons {
       &:nth-child(5) {
-        color: #FFB906 !important;
+        color: #ffb906 !important;
       }
     }
   }
@@ -153,7 +151,7 @@
     transition: background-color ease 0.5s;
 
     &--green {
-      background-color: #C7F2A5;
+      background-color: #c7f2a5;
     }
 
     &-add {
@@ -175,7 +173,7 @@
 
       &.active {
         svg {
-          fill: #FFB906;
+          fill: #ffb906;
         }
       }
 
@@ -188,7 +186,126 @@
 
     &-link {
       margin-bottom: -68px;
-      background-color: #AFDBF3;
+      background-color: #afdbf3;
     }
+  }
+
+  &__sliders-wr {
+    margin: 0 -61px;
+  }
+
+  &__sliders {
+    &.show {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__slider {
+    min-width: 1272px;
+    width: 100%;
+    min-height: 582px;
+    padding: 56px 0 87px 61px;
+    margin-bottom: 320px;
+    border-radius: 15px;
+    background-color: #f2f6f9;
+    overflow: hidden;
+
+    &-title {
+      margin-bottom: 28px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 38px;
+      color: $dark-blue;
+    }
+
+    &-story {
+      max-width: 945px;
+      margin-bottom: 45px;
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 29px;
+      color: $dark-blue;
+    }
+  }
+
+  &__slider-wr {
+    //width: calc(100% - 183px);
+    //padding-left: 183px;
+    //margin-left: -32px;
+  }
+
+  &__slider-container {
+    width: calc(100% - 228px);
+    margin-left: 122px;
+    margin-right: 106px;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  &__slide-wr {
+    width: 320px;
+
+    &:not(:last-child) {
+      .list__slide-img-wr {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -198px;
+          top: 50%;
+          width: 174px;
+          height: 0px;
+          border-bottom: 1px solid $dark-blue;
+          background-color: $dark-blue;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+
+    &-img-wr {
+      position: relative;
+      width: 235px;
+      margin-bottom: 5px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-name {
+      width: 312px;
+      margin-bottom: 0;
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 29px;
+      color: $dark-blue;
+    }
+
+    &-city {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+      color: $dark-blue;
+    }
+
+    &--prev {
+      margin-left: -35px;
+      margin-right: 170px !important;
+    }
+  }
+}
+
+.swiper-scrollbar {
+  background-color: transparent;
+  &-drag {
+    background-color: $dark-blue;
+    opacity: 0.5;
   }
 }
