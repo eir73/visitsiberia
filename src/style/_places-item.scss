@@ -1,0 +1,330 @@
+@import "./vars";
+
+.article {
+  color: $dark-blue;
+  padding-bottom: 354px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1608px;
+
+    margin: 142px 95px 0 217px;
+  }
+
+  &__title {
+    margin-bottom: 29px;
+
+    font-size: 72px;
+    font-weight: 200;
+    text-shadow: 0 4px 4px rgba($color: black, $alpha: 0.25);
+  }
+
+  &__recommendation {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 70px;
+
+    &-text {
+      margin-left: 8px;
+
+      font-size: 30px;
+      color: $text-yellow;
+    }
+  }
+
+  &__sign {
+    width: 800px;
+    margin-left: 141px;
+
+    font-size: 30px;
+
+    &-bold {
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    color: $text-blue;
+    font-weight: 400;
+  }
+
+  &__information {
+    margin-top: 14px;
+    font-weight: 300;
+  }
+
+  &__block {
+    margin-top: 305px;
+  }
+
+  &__info {
+   max-width: 1332px;
+   margin: 305px auto 0;
+  }
+
+  &__text {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 300;
+  }
+  
+  &__block-info {
+    margin: 102px 0 0 64px;
+  }
+
+  &__contact-title {
+    margin-top: 36px;
+    font-weight: 600;
+  }
+  
+  &__contact {
+    display: block;
+  }
+
+  &__history {
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: 355px;
+  }
+
+  &__name {
+    position: relative;
+    padding-left: 21px;
+    margin-bottom: 67px;
+    font-size: 64px;
+    font-weight: 200;
+  }
+
+  &__name::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    width: 1px;
+    height: 65px;
+
+    background: $text-blue;
+  }
+
+  &__history-text {
+    margin-right: 116px;
+  }
+
+  &__pass-text {
+    max-width: 1177px;
+    margin: 0 auto 95px;
+  }
+
+  &__map {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__feedback {
+    margin-right: 358px;
+    margin-left: 358px;
+
+    width: 487px;    
+  }
+
+  &__get-feedback {
+    display: block;
+
+    width: 352px;
+    height: 70px;
+
+    margin: 115px auto 0;
+
+    font-size: 24px;
+    color: $dark-blue;
+
+    background: $button-light-gray;
+    border-radius: 15px;
+  }
+
+  &__name-position {
+    margin-left: 333px;
+  }
+}
+
+.page-nav {
+  width: 358px;
+
+  color: $text-light;
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    padding: 27px 34px 7px;
+
+    font-size: 24px;
+
+    background-color: $dark-blue;
+    border-radius: 15px;
+  }
+
+  &__item {
+    list-style-type: none;
+    margin: 20px 0;
+  }
+
+  &__button {
+    margin: 18px 0;
+  }
+
+  &__off {
+    margin-right: 18px;
+
+    width: 99px;
+    height: 48px;
+
+    color: $dark-blue;
+    font-size: 24px;
+    background: $button-light-blue;
+
+    border-radius: 15px;
+  }
+
+  &__icon-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 38px;
+    color: $text-blue;
+  }
+
+  &__share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 241px;
+    height: 47px;
+
+    color: white;
+    font-size: 24px;
+    background: $text-blue;
+
+    border-radius: 15px;
+  }
+
+  &__icon-share {
+    margin-left: 28px;
+  }
+
+
+  &__link-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 47px;
+
+    font-size: 24px;
+    color: $dark-blue;
+    background: $text-light-blue;
+
+    border-radius: 15px;
+  }
+}
+
+.feedback {
+  font-size: 24px;
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__name {
+    color: $text-gray;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  &__data {
+    text-align: center;
+    color: $text-blue;
+  }
+
+  &__stars {
+    justify-content: center;
+  }
+
+  &__text {
+    font-weight: 300;
+    line-height: 106%;
+  }
+
+  &__star {
+    font-size: 39px;
+    margin: 10px 11px;
+  }
+
+  &__reply {
+    display: flex;
+    align-items: center;
+
+    margin-top: 35px;
+  }
+
+  &__icon {
+    margin: 0 13px;
+    color: $dark-blue;
+  }
+
+  &__reply-name {
+    font-size: 24px;
+    color: $text-gray;
+    font-weight: 600;
+    line-height: 25px;
+  }
+
+  &__reply-data {
+    margin-left: 50px;
+    font-size: 24px;
+    color: $text-blue;
+  }
+
+  &__reply-text {
+    margin-top: 11px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 42px auto 0;
+
+    width: 170px;
+    height: 47px;
+
+    background: $button-light-blue;
+    border-radius: 15px;
+  }
+
+  &__button-icon {
+    margin-left: 8px;
+    color: $dark-blue;
+  }
+
+  
+}
+
+p,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
