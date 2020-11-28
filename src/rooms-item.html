@@ -190,7 +190,7 @@
 
       <section class="article__feedback article__block">
         <h2 class="article__name wow fadeInUp">Отзывы</h2>
-        <div class="article__feedback-slider d-flex justify-content-around wow fadeInUp">
+        <div class="article__feedback-slider d-flex j wow fadeInUp">
           <div class="feedback">
             <p class="feedback__name">Королёв В.</p>
             <p class="feedback__data">3 октября 2020</p>
@@ -372,21 +372,20 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-nextt"></div>
-            <div class="swiper-button-prevv"></div>
+            <div class="swiper-button-next swiper-button"></div>
+            <div class="swiper-button-prev swiper-button"></div>
           </div>
           <script>
             const swiper = new Swiper('.article__events-slider-cont', {
               slidesPerView: 'auto',
               spaceBetween: 79,
               slidesOffsetBefore: 170,
-              
     
               //width: 1107,
-              /*navigation: {
-                nextEl: '.swiper-button-nextt',
-                prevEl: '.swiper-button-prevv',
-              },*/
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
             })
           </script>
         </div>
@@ -505,8 +504,8 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-nextt"></div>
-            <div class="swiper-button-prevv"></div>
+            <div class="swiper-button-next swiper-button"></div>
+            <div class="swiper-button-prev swiper-button"></div>
           </div>
           <script>
             const swiper2 = new Swiper('.article__events-slider-cont', {
@@ -515,10 +514,10 @@
               slidesOffsetBefore: 170,
 
               //width: 1107,
-              /*navigation: {
+              navigation: {
                 nextEl: '.swiper-button-nextt',
                 prevEl: '.swiper-button-prevv',
-              },*/
+              },
             })
           </script>
         </div>
@@ -637,8 +636,8 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-nextt "></div>
-            <div class="swiper-button-prevv "></div>
+            <div class="swiper-button-next swiper-button "></div>
+            <div class="swiper-button-prev  swiper-button"></div>
           </div>
           <script>
             const swiper3 = new Swiper('.article__events-slider-cont', {
@@ -647,10 +646,10 @@
               slidesOffsetBefore: 170,
 
               //width: 1107,
-              /*navigation: {
-                nextEl: '.swiper-button-nextt',
-                prevEl: '.swiper-button-prevv',
-              },*/
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
             })
           </script>
         </div>

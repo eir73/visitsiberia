@@ -2,29 +2,12 @@
   color: $dark-blue;
   padding-bottom: 354px;
 
-  .swiper-slide-prev {
-    margin-left: -100px;
-    margin-right: 176px !important;
-  }
-
   &__header-wr {
     padding: 0 95px;
 
     @media screen and (max-width: 1608px) {
       padding: 0 20px;
     }
-  }
-
-  .swiper-button-next {
-    right: 0;
-  }
-
-  .swiper-button-prev {
-    left: 0;
-  }
-
-  .swiper-slide {
-    width: 560px;
   }
 
   .list {
@@ -52,10 +35,7 @@
     }
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: calc(50% - 55px);
-  }
+
 
   &__header {
     display: flex;
@@ -166,6 +146,18 @@
     max-width: 1307px;
     padding-right: 20px;
     margin: 305px auto;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: calc(50% - 55px);
+    } 
+     .swiper-button-next {
+      right: 0;
+    }
+  
+    .swiper-button-prev {
+      left: 0;
+    }
 
     &-container {
       width: 1107px;
@@ -279,6 +271,97 @@
 
   &__name-position {
     margin-left: 333px;
+  }
+
+  &__events-slider-cont {
+    .swiper-slide-prev {
+      margin-left: -100px;
+      margin-right: 176px !important;
+    }  
+    
+    .swiper-slide {
+      width: 560px;
+    }
+
+    .swiper-button {
+      top: calc(50% - 82px);
+    }
+  }
+}
+
+.page {
+  &__route {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1344px;
+    margin: 184px auto 0;
+
+    &-item {
+      position: relative;
+      width: 312px;
+      height: 270px;
+      margin-left: 97px;
+      margin-right: 49px;
+      margin-bottom: 150px;
+
+      &:nth-child(3) {
+        margin-right: 10px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:not(:first-child) {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 93px;
+          left: -97px;
+          display: block;
+          width: 73px;
+          border-bottom: 1px solid $dark-blue;
+        }
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 93px;
+          left: calc(100% - 53px);
+          display: block;
+          width: 101px;
+          border-bottom: 1px solid $dark-blue;
+        }
+      }
+    }
+
+    &-img-wr {
+      width: 235px;
+      margin-bottom: 5px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-name {
+      margin-bottom: 0;
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 29px;
+      color: $dark-blue;
+    }
+
+    &-city {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+      color: $dark-blue;
+    }
   }
 }
 
