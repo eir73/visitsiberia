@@ -5,7 +5,7 @@
 <body>
   //= partials/_header.html
 
-  <main class="main" id="favorite">
+  <main class="main" id="fav">
     <div class="fav d-flex flex-column" id="favorite-vue">
       <h1 class="fav__heading exo">
         Избранное
@@ -444,6 +444,28 @@
   </main>
 
   //= partials/_footer.html
+
+  <script>
+ 
+    const fav = new Vue({
+      el: 'fav',
+      data() {
+        return {
+          fav: []
+        }
+      },
+      async mounted() {
+        const res = await fetch('url')
+        const data = await res.json()
+        // data is raw data from the server
+        this.fav = data
+      },
+      methods: {
+
+      }
+    })
+  </script>
+
 </body>
 
 </html>

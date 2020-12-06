@@ -358,6 +358,25 @@
       }
     })
   </script>
+
+<script>
+  const vue = new Vue({
+    el: 'route',
+    data() {
+      return {
+        data: []
+      }
+    },
+    async mounted() {
+      const res = await fetch('url')
+      const data = await res.json()
+      // data is raw data from the server
+      this.data = data
+    },
+    methods: {
+    }
+  })
+</script>
 </body>
 
 </html>

@@ -69,17 +69,20 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="list__items show">
-              <div class="list__item d-flex flex-column">
+              <div 
+                class="list__item d-flex flex-column"
+                v-for="event in events"
+              >
                 <a href="#" class="d-flex flex-column nop">
                   <div class="list__img">
-                    <img src="./img/item-img.jpg" alt="">
+                    <img :src="event.image" alt="">
                   </div>
                   <p href="#" class="list__name exo">
-                    Гостинница “Огни Енисея”
+                    {{event.name}}
                   </p>
                   <p href="#" class="list__city">
                     <span class="material-icons">room&nbsp;</span>
-                    с. Парная
+                    {{event.city}}
                   </p>
                 </a>
                 <div class="list__buttons d-flex flex-row align-items-center">
@@ -98,7 +101,7 @@
                   </button>
                 </div>
               </div>
-              <div class="list__item d-flex flex-column">
+              <!-- <div class="list__item d-flex flex-column">
                 <a href="#" class="d-flex flex-column nop">
                   <div class="list__img">
                     <img src="./img/item-img.jpg" alt="">
@@ -443,7 +446,7 @@
                 <a href="#" class="list__button list__button-link">
                   Перейти к маршруту
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="places__pagination pagination">
               <div class="pagination__page active">1</div>
@@ -494,11 +497,14 @@
       el: 'events',
       data() {
         return {
-          
+          events: []
         }
       },
-      mounted() {
-
+      async mounted() {
+        const res = await fetch('url')
+        const data = await res.json()
+        // data is raw data from the server
+        this.events = data
       },
       methods: {
 
