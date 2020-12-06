@@ -67,14 +67,35 @@
   }
 
   &__constructor-wr {
-    min-width: 324px;
+    width: 1324px;
+    height: 112px;
+    padding-left: 30px;
     margin-bottom: 32px;
     background-color: $text-light;
-    border-radius: 50px;
+    border-radius: 60px;
+
+    .heading__selects {
+      margin-bottom: 0;
+    }
   }
 
   &__constructor {
-    padding: 37px 6px 37px 55px;
+    #index__submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 101px;
+      height: 101px;
+      border-radius: 60px;
+      margin: 6px;
+      background-color: $dark-blue;
+      cursor: pointer;
+      transition: opacity ease 0.5s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   &__tagline {

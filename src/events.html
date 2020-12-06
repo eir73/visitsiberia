@@ -5,15 +5,21 @@
 <body>
   //= partials/_header.html
 
-  <main class="main">
+  <main class="main" id="events">
     <div class="events d-flex flex-column" id="events">
       <div class="events__heading heading heading--green" id="heading">
         <h1 class="heading__title">События</h1>
         <div class="heading__selects heading__selects--events">
           <div class="heading__select" id="heading-first">
-            <select id="first">
+            <input 
+              id="first" 
+              autocomplete="off" 
+              placeholder="Начало пути — Финиш"
+              readonly
+              >
+            <!-- <select id="first">
               <option disabled selected>14 ноя 2020 - 23 ноя 2020</option>
-            </select>
+            </select> -->
           </div>
           <div class="heading__select" id="heading-second">
             <select id="second">
@@ -44,17 +50,6 @@
           </div>
         </div>
       </div>
-      <script>
-        $(function () {
-          $("#first").selectmenu();
-
-          $("#second").selectmenu();
-
-          $("#third").selectmenu()
-
-          $("#fourth").selectmenu();
-        });
-      </script>
       <div class="events__items list">
         <ul class="nav nav-pills list__tabs" id="pills-tab" role="tablist">
           <li class="nav-item">
@@ -466,6 +461,50 @@
   </main>
 
   //= partials/_footer.html
+  <script>
+  /*  $('#first').multiDatesPicker({
+      firstDay: 1,
+      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      // monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
+      // 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+      dateFormat: "d m yy",
+      separator: ' — ',
+      maxPicks: 2,
+    });*/
+
+    $('#first').datepick({ 
+      yearRange:'c-0:c+2',
+      firstDay: 1,
+      multiSelect: 2,
+      multiSeparator: ' — ',
+      dateFormat: 'd M yyyyy',
+      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
+     'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
+    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'], 
+    });
+
+    $("#second").selectmenu();
+    $("#third").selectmenu()
+    $("#fourth").selectmenu();
+  </script>
+  <script>
+    const events = new Vue({
+      el: 'events',
+      data() {
+        return {
+          
+        }
+      },
+      mounted() {
+
+      },
+      methods: {
+
+      }
+    })
+  </script>
 </body>
 
 </html>

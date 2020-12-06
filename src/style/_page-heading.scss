@@ -30,11 +30,16 @@
 
     &--rooms {
       #heading-second, #second-button {
-        width: 300px !important;
+        width: 250px !important;
       }
     }
     
     &--meal {
+
+      #heading-first, #first-button {
+        width: 260px !important;
+      }
+
       #heading-second, #second-button {
         width: 260px !important;
       }
@@ -45,13 +50,147 @@
     }
     
     &--events {
-
+      input#first {
+        width: 312px;
+        border: none !important;
+        // max-width: 300px !important;
+         padding: 10px 12px 10px 25px !important;
+         flex-grow: 1;
+         background-color: transparent !important;
+         outline: none !important;
+         font-weight: 600 !important;
+         font-size: 24px;
+         line-height: 41px;
+         color: $dark-blue !important;
+         border-radius: 15px !important;
+         transition: background-color ease 0.5s;
+        &::placeholder { 
+          color: $dark-blue;
+          opacity: 1;
+        }
+        
+        &:-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        
+        &::-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        &:hover {
+          background-color: rgba(256, 256, 256, 0.5) !important;
+        }
+        
+        &:focus {
+          margin-bottom: -1px;
+          background-color: #fff !important;
+          border-bottom-left-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        }
+      }
     }
 
     &--route {
       #heading-second, #second-button {
-        width: 260px !important;
+        width: 230px !important;
       }
+
+      #third-button {
+        width: 305px !important;
+      }
+
+      input#first {
+        width: 312px;
+        border: none !important;
+        // max-width: 300px !important;
+         padding: 10px 12px 10px 25px !important;
+         flex-grow: 1;
+         background-color: transparent !important;
+         outline: none !important;
+         font-weight: 600 !important;
+         font-size: 24px;
+         line-height: 41px;
+         color: $dark-blue !important;
+         border-radius: 15px !important;
+         transition: background-color ease 0.5s;
+        &::placeholder { 
+          color: $dark-blue;
+          opacity: 1;
+        }
+        
+        &:-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        
+        &::-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        &:hover {
+          background-color: rgba(256, 256, 256, 0.5) !important;
+        }
+        
+        &:focus {
+          margin-bottom: -1px;
+          background-color: #fff !important;
+          border-bottom-left-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        }
+      }
+    }
+
+    &--index {
+      #heading-second, #second-button {
+        max-width: 244px !important;
+      }
+
+      #third-button {
+        max-width: 305px !important;
+      }
+
+      #fourth-button {
+        max-width: 300px !important;
+      }
+
+      input#first {
+        width: 312px;
+        border: none !important;
+        // max-width: 300px !important;
+         padding: 10px 12px 10px 25px !important;
+         flex-grow: 1;
+         background-color: transparent !important;
+         outline: none !important;
+         font-weight: 600 !important;
+         font-size: 24px;
+         line-height: 41px;
+         color: $dark-blue !important;
+         border-radius: 15px !important;
+         transition: background-color ease 0.5s;
+        &::placeholder { 
+          color: $dark-blue;
+          opacity: 1;
+        }
+        
+        &:-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        
+        &::-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        &:hover {
+          background-color: rgba(256, 256, 256, 0.5) !important;
+        }
+        
+        &:focus {
+          margin-bottom: -1px;
+          background-color: #fff !important;
+          border-bottom-left-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        }
+      }
+ 
     }
   }
 
@@ -75,54 +214,76 @@
   }
 
   &--yellow {
-    background: 
-    linear-gradient(to bottom right, #f8fd10 0%, #ffffff 50%) bottom right,
-      linear-gradient(to bottom left, #f8fd10 0%, #ffffff 50%) bottom left,
-      linear-gradient(to top left, #f8fd10 0%, #ffffff 50%) top left,
-      linear-gradient(to top right, #f8fd10 0%, #ffffff 50%) top right;
-    background-size: 50% 50%;
+    background: radial-gradient(44.83% 47.04% at 50% 52.96%, rgba(248, 253, 16, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-size: 100%;
     background-repeat: no-repeat;
   }
 
   &--blue {
-    background: linear-gradient(to bottom right, #599cc1 0%, #ffffff 50%) bottom
-        right,
-      linear-gradient(to bottom left, #599cc1 0%, #ffffff 50%) bottom left,
-      linear-gradient(to top left, #599cc1 0%, #ffffff 50%) top left,
-      linear-gradient(to top right, #599cc1 0%, #ffffff 50%) top right;
-    background-size: 50% 50%;
+    background: radial-gradient(44.83% 47.04% at 50% 52.96%, rgba(89, 156, 193, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-size: 100%;
     background-repeat: no-repeat;
   }
 
   &--green {
-    background: linear-gradient(to bottom right, #78fd10 0%, #ffffff 50%) bottom
-        right,
-      linear-gradient(to bottom left, #78fd10 0%, #ffffff 50%) bottom left,
-      linear-gradient(to top left, #78fd10 0%, #ffffff 50%) top left,
-      linear-gradient(to top right, #78fd10 0%, #ffffff 50%) top right;
-    background-size: 50% 50%;
+    background: radial-gradient(44.83% 47.04% at 50% 52.96%, rgba(120, 253, 16, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-size: 100%;
     background-repeat: no-repeat;
   }
 
   &--cyan {
-    background: linear-gradient(to bottom right, #10fde1 0%, #ffffff 50%) bottom
-        right,
-      linear-gradient(to bottom left, #10fde1 0%, #ffffff 50%) bottom left,
-      linear-gradient(to top left, #10fde1 0%, #ffffff 50%) top left,
-      linear-gradient(to top right, #10fde1 0%, #ffffff 50%) top right;
-    background-size: 50% 50%;
+    background: radial-gradient(44.83% 47.04% at 50% 52.96%, rgba(16, 253, 225, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-size: 100%;
     background-repeat: no-repeat;
   }
 
   &--pink {
-    background: linear-gradient(to bottom right, #fd10bb 0%, #ffffff 50%) bottom
-        right,
-      linear-gradient(to bottom left, #fd10bb 0%, #ffffff 50%) bottom left,
-      linear-gradient(to top left, #fd10bb 0%, #ffffff 50%) top left,
-      linear-gradient(to top right, #fd10bb 0%, #ffffff 50%) top right;
-    background-size: 50% 50%;
+    background: radial-gradient(44.83% 47.04% at 50% 52.96%, rgba(253, 16, 187, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
+    background-size: 100%;
     background-repeat: no-repeat;
   }
+}
+
+.datepick, .datepick-month  {
+  width: 312px !important;
+  padding-bottom: 3px;
+}
+
+.datepick {
+  margin-top: -1px;
+}
+
+.datepick-month td, .datepick-month th, .datepick-month-header, .datepick-month-header select {
+  background-color: #fff !important;
+  border: none !important;
+  color: $dark-blue !important;
+}
+
+.datepick-highlight {
+  background-color: rgba($dark-blue, 0.2) !important;
+  //opacity: 0.2 !important;
+  color: #000 !important;
+}
+
+.datepick-month td .datepick-selected {
+  color: #fff !important;
+  background-color: $dark-blue !important;
+}
+
+.datepick-month td a {
+  border-radius: 15px !important;
+}
+
+.datepick {
+  overflow: hidden;
+  border: none !important;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.datepick-month {
+  border: none !important;
 }
 
 .ui-button {
@@ -149,7 +310,7 @@
   text-align: center !important; 
 }
 
-.ui-state-disabled {
+.ui-selectmenu-menu .ui-state-disabled {
   display: none;
 }
 
@@ -164,6 +325,12 @@
   }
 }
 
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {  
+  border: 1px solid #dad55e;
+  background: #fffa90 !important;
+  color: #777620 !important;
+}
+
 .ui-selectmenu-icon.ui-icon {
   width: 38px;
   height: 38px;
@@ -172,11 +339,30 @@
   background-position: 0 0 !important;
 }
 
+.datepick-nav, .datepick-ctrl {
+  display: none;
+}
+
+.datepick-month td {
+  border: none;
+}
+
+.datepick-month a, .datepick-month td .datepick-weekend {
+  background-color: #fff;
+}
+
+.datepick-month td .datepick-weekend {
+  background-color: #fff;
+}
+
+.ui-widget {
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+
 .ui-widget.ui-widget-content {
   margin-top: -1px;
   max-height: 260px;
   font-family: "Source Sans Pro", sans-serif !important;
-  font-family: inherit;
   padding-bottom: 5px;
   border: none !important;
   outline: none !important;
@@ -184,6 +370,15 @@
   border-bottom-left-radius: 15px !important;
   background-color: $text-light !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &.ui-datepicker {
+    max-height: unset;
+
+    .ui-state-active {
+      font-size: 16px !important;
+      font-weight: 400 !important;
+    }
+  }
 }
 /*
 .ui-selectmenu-open {
@@ -212,6 +407,36 @@
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active {
-  box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.25);
+ 
   margin: 0;
+  text-decoration-line: line-through;
+}
+
+#index {
+  .ui-selectmenu-button.ui-button, input#first {
+    height: 112px !important;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 60px !important;
+
+    .ui-selectmenu-text {
+      flex-grow: 1;
+    }
+
+    &:hover {
+      background-color:  #DEE4EA !important;
+      opacity: 1 !important;
+    }
+  }
+
+  span.ui-button.ui-selectmenu-button-open, input#first:focus {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    background-color: #fff !important;
+    
+    &:hover {
+      background-color: #fff !important;
+    }
+  }
 }

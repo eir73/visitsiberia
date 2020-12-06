@@ -5,15 +5,18 @@
 <body>
   //= partials/_header.html
 
-  <main class="main">
+  <main class="main" id="route">
     <div class="route d-flex flex-column" id="route">
       <div class="route__heading heading heading--pink" id="heading">
         <h1 class="heading__title">Маршруты</h1>
         <div class="heading__selects heading__selects--route">
           <div class="heading__select">
-            <select id="first">
-              <option disabled selected>14 ноя 2020 - 23 ноя 2020</option>
-            </select>
+            <input 
+            id="first" 
+            autocomplete="off" 
+            placeholder="Начало пути — Финиш"
+            readonly
+            >
           </div>
           <select id="second">
             <option disabled selected>Сколько дней</option>
@@ -35,23 +38,12 @@
           </select>
           <select id="fourth">
             <option disabled selected>Тип отдыха</option>
-            <option>Активно-приключенческий</option>
-            <option>Спокойный отдых</option>
-            <option>Культурно-познавательный</option>
+            <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">Активно-приключенческий</option>
+            <option title=" Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">Спокойный отдых</option>
+            <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">Культурно-познавательный</option>
           </select>
         </div>
       </div>
-      <script>
-        $(function () {
-          $("#first").selectmenu();
-
-          $("#second").selectmenu();
-
-          $("#third").selectmenu()
-
-          $("#fourth").selectmenu();
-        });
-      </script>
       <div class="route__items list">
         <ul class="nav nav-pills list__tabs wow fadeInUp" id="pills-tab" role="tablist">
           <li class="nav-item">
@@ -319,6 +311,27 @@
   </main>
 
   //= partials/_footer.html
+  <script>
+    $('#first').datepick({ 
+      yearRange:'c-0:c+2',
+      firstDay: 1,
+      multiSelect: 2,
+      multiSeparator: ' — ',
+      dateFormat: 'd M yyyyy',
+      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
+     'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
+    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'], 
+    });
+
+    $("#second").selectmenu();
+
+    $("#third").selectmenu()
+
+    $("#fourth").selectmenu();
+  </script>
+  
   <script>
     var mySwiper = new Swiper('.swiper-container', {
       spaceBetween: 136,

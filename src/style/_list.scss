@@ -304,6 +304,7 @@
 
 .swiper-scrollbar {
   background-color: transparent;
+  bottom: -25px !important;
   &-drag {
     background-color: $dark-blue;
     opacity: 0.5;

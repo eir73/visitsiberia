@@ -5,9 +5,9 @@
 <body>
   //= partials/_header.html
 
-  <main class="main">
-    <div class="index d-flex flex-column">
-      <div class="index__header d-flex flex-column align-items-center justify-content-center">
+  <main class="main" id="index">
+    <div class="index d-flex flex-column" id="index-vue">
+    <div class="index__header d-flex flex-column align-items-center justify-content-center">
         <div class="index__socials d-flex flex-column align-items-center wow fadeInRight">
           <a href="#" class="index__social nop">
             <img src="./img/facebook.svg" alt="facebook">
@@ -41,7 +41,43 @@
         </div>
         <div class="index__constructor-wr">
           <div class="index__constructor">
-
+            <div class="heading__selects heading__selects--index">
+              <div class="heading__select">
+                <input 
+                id="first" 
+                autocomplete="off" 
+                placeholder="Начало пути — Финиш"
+                readonly
+                >
+              </div>
+              <select id="second">
+                <option disabled selected>Сколько дней</option>
+                <option>1 - 3 дней</option>
+                <option>3 - 7 дней</option>
+                <option>7 - 10 дней</option>
+                <option>10 - 15 дней</option>
+                <option>15 - 25 дней</option>
+                <option>25+ дней</option>
+              </select>
+              <select id="third">
+                <option disabled selected>С кем</option>
+                <option>Один или вдвоем</option>
+                <option>С ребенком до 3 лет</option>
+                <option>С ребенком до 10 лет</option>
+                <option>С подростком</option>
+                <option>Вся семья</option>
+                <option>Компания от 4-х человек</option>
+              </select>
+              <select id="fourth">
+                <option disabled selected>Тип отдыха</option>
+                <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">Активно-приключенческий</option>
+                <option title=" Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">Спокойный отдых</option>
+                <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">Культурно-познавательный</option>  
+              </select>
+              <button id="index__submit">
+                <img src="./img/index-arrow.svg" alt="">
+              </button>
+            </div>
           </div>
         </div>
         <p class="index__tagline">
@@ -233,6 +269,32 @@
   </main>
 
   //= partials/_footer.html
+  <script>
+        $('#first').datepick({ 
+      yearRange:'c-0:c+2',
+      firstDay: 1,
+      multiSelect: 2,
+      multiSeparator: ' — ',
+      dateFormat: 'd M yyyyy',
+      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
+     'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
+    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'], 
+    });
+
+    $("#second").selectmenu();
+    $("#third").selectmenu()
+    $("#fourth").selectmenu();
+  </script>
+  <script>
+    const indexVue = new Vue({
+      el: 'index-vue',
+      mounted() {
+        //console.log('VUE!')
+      }
+    })
+  </script>
 </body>
 
 </html>
