@@ -497,7 +497,9 @@
       el: 'events',
       data() {
         return {
-          events: []
+          events: [],
+          a: 10,
+          filters: []
         }
       },
       async mounted() {
@@ -505,9 +507,16 @@
         const data = await res.json()
         // data is raw data from the server
         this.events = data
+        await this.fetchFilters()
       },
       methods: {
+        async fetchFilters() {
+          const res = await fetch('http://api.webcook.com.ua/public/api/dictionaries')
+          const data = await res.json()
 
+          this.filters = data.data
+          console.log(this.filters)
+        }
       }
     })
   </script>

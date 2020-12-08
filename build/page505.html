@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>visitsiberia.info</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha512-uCQmAoax6aJTxC03VlH0uCEtE0iLi83TW1Qh6VezEZ5Y17rTrIE+8irz4H4ehM7Fbfbm8rb30OkxVkuwhXxrRg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="fixed-top">
+    <nav class="navbar sticky-top navbar-expand-lg justify-content-between align-items-start">
+      <div style="flex-grow: 1;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon material-icons">menu</span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="./">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./route.html">Маршруты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./places.html">Объекты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./events.html">События</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./rooms.html">Проживание</a>
+            </li>
+            <li class="nav-item mr-auto">
+              <a class="nav-link" href="./meal.html">Еда</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./favorites.html">Избранное</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link material-icons" href="./search.html">search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Ру</a>
+        </li>
+        <li class="nav-item pl-0">
+          <a class="nav-link pl-0" href="#">En</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main error">
+    <div class="error__container">
+      <img src="./img/505.svg" alt="">
+      <h1 class="error__code">505</h1>
+    </div>
+    <h2 class="error__message">
+      Ошибка связи с сервером
+    </h2>
+    <p class="error__text">
+      Перезагрузите страницу или попробуйте подключиться позже
+    </p>
+    <a href="#" onclick="history.go(0)" class="error__link">
+      Перезагрузить
+    </a>
+  </main>
+</body>
+
+</html>
