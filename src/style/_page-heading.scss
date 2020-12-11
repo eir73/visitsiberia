@@ -13,6 +13,14 @@
     font-weight: 200;
     font-size: 120px;
     line-height: 144px;
+
+    @media screen and (max-width: 992px) {
+      font-size: 100px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 60px;
+    }
   }
 
   &__selects {
@@ -22,14 +30,21 @@
     height: 59px;
     margin-bottom: 100px;
 
+    @media screen and (max-width: 1220px) {
+      flex-direction: column;
+      align-items: center;
+      height: unset;
+      min-width: unset;
+    }
+
     &--places { 
-      #heading-second, #second-button {
+      #second-button {
         width: 260px !important;
       }
     }
 
     &--rooms {
-      #heading-second, #second-button {
+      #second-button {
         width: 250px !important;
       }
     }
@@ -64,6 +79,11 @@
          color: $dark-blue !important;
          border-radius: 15px !important;
          transition: background-color ease 0.5s;
+
+         @media screen and (max-width: 1350px) {
+          font-size: 22px;
+          width: 292px;
+        }
         &::placeholder { 
           color: $dark-blue;
           opacity: 1;
@@ -113,6 +133,12 @@
          color: $dark-blue !important;
          border-radius: 15px !important;
          transition: background-color ease 0.5s;
+
+         @media screen and (max-width: 1350px) {
+           font-size: 22px;
+           width: 292px;
+         }
+
         &::placeholder { 
           color: $dark-blue;
           opacity: 1;
@@ -150,6 +176,10 @@
 
       #fourth-button {
         max-width: 300px !important;
+
+        @media screen and (max-width: 575px) {
+          margin-bottom: 35px !important;
+        }
       }
 
       input#first {
@@ -166,6 +196,10 @@
          color: $dark-blue !important;
          border-radius: 15px !important;
          transition: background-color ease 0.5s;
+         @media screen and (max-width: 1350px) {
+          font-size: 22px;
+          width: 292px;
+        }
         &::placeholder { 
           color: $dark-blue;
           opacity: 1;
@@ -244,9 +278,19 @@
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .ui-selectmenu-text {
+    margin-right: 10px;
+  }
+}
+
 .datepick, .datepick-month  {
   width: 312px !important;
   padding-bottom: 3px;
+
+  @media screen and (max-width: 1350px) {
+    width: 292px !important;
+  }
 }
 
 .datepick {
@@ -303,6 +347,15 @@
 
   &:hover {
     background-color: rgba(256, 256, 256, 0.5) !important;
+  }
+
+  @media screen and (max-width: 1350px) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 1220px) {
+    max-width: 320px !important;
+    min-width: 320px !important;
   }
 }
 
@@ -380,16 +433,6 @@
     }
   }
 }
-/*
-.ui-selectmenu-open {
-  max-width: 336px;
-  max-height: 224px;
-  padding-bottom: 10px;
-  border-bottom-right-radius: 15px !important;
-  border-bottom-left-radius: 15px !important;
-  background-color: $text-light !important;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}*/
 
 .ui-menu .ui-menu-item-wrapper {
   padding-left: 25px !important;
@@ -419,6 +462,17 @@
     flex-direction: row-reverse;
     align-items: center;
     border-radius: 60px !important;
+
+    @media screen and (max-width: 1220px) {
+      height: 75px !important;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 575px) {
+      height: 40px !important;
+      margin-bottom: 5px;
+      border-radius: 15px !important;
+    }
 
     .ui-selectmenu-text {
       flex-grow: 1;

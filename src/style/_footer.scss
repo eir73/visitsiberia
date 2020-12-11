@@ -9,17 +9,62 @@
     display: flex;
     margin: 0 auto;
     padding: 98px 24px 24px;
+
+    @media screen and (max-width: 1220px) {
+      justify-content: space-around !important;
+    }
+
+    @media screen and (max-width: 850px) {
+      padding-top: 16px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media screen and (max-width: 850px) {
+      display: flex;
+    }
+  }
+
+  &__desktop {
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+  }
+
+  &__mob-first {
+    @media screen and (max-width: 850px) {
+      order: -1;
+      margin-bottom: 43px;
+    }
+  }
+
+  &__contacts {
+    @media screen and (max-width: 1220px) {
+      display: none !important;
+    }
   }
 
   &__nav {
     display: flex;
     flex-grow: 1;
+
+    @media screen and (max-width: 1220px) {
+      flex-grow: 0;
+    }
   }
 
   &__col {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media screen and (max-width: 575px) {
+      width: 100%;
+    }
 
     &-name {
       margin-bottom: 23px;
@@ -31,6 +76,10 @@
     &-list {
       margin-bottom: 0;
       list-style-type: none;
+
+      @media screen and (max-width: 850px) {
+        margin-bottom: 38px;
+      }
     }
 
     &-text {
@@ -58,6 +107,14 @@
 
   &__form {
     margin-bottom: 28px;
+
+    @media screen and (max-width: 575px) {
+      align-items: center;
+      .form-group {
+        flex-grow: 1;
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__input {
@@ -96,5 +153,9 @@
     line-height: 25px;
 
     color: #6C7F8B;
+
+    @media screen and (max-width: 850px) {
+      margin-top: 30px;
+    }
   }
 }

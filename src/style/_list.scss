@@ -2,8 +2,22 @@
   width: 1394px;
   margin: 0 auto;
 
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
   &__tabs {
     margin-bottom: 47px;
+
+    @media screen and (max-width: 650px) {
+      justify-content: center;
+    }
+
+    .ml-auto {
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
+    }
 
     .nav-link {
       padding: 13px 18px;
@@ -42,6 +56,15 @@
   &__item {
     width: 404px;
     margin-bottom: 263px;
+
+    @media screen and (max-width: 1300px) {
+      width: calc(50% - 15px);
+      margin-bottom: 120px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
 
     &-sign {
       position: absolute;
@@ -161,6 +184,11 @@
       &:hover {
         background-color: #d7f5c0;
       }
+
+      @media screen and (max-width: 1300px) {
+        width: unset;
+        flex-grow: 1;
+      }
     }
 
     &-star {
@@ -192,6 +220,10 @@
 
   &__sliders-wr {
     margin: 0 -61px;
+
+    @media screen and (max-width: 1540px) {
+      margin: 0 0;
+    }
   }
 
   &__sliders {
@@ -210,6 +242,11 @@
     border-radius: 15px;
     background-color: #f2f6f9;
     overflow: hidden;
+
+    @media screen and (max-width: 1440px) {
+      min-width: 100%;
+      margin-bottom: 120px;
+    }
 
     &-title {
       margin-bottom: 28px;
@@ -241,6 +278,10 @@
     margin-right: 106px;
     flex-direction: column;
     overflow: visible;
+
+    @media screen and (max-width: 1440px) {
+      margin-left: 50px; 
+    }
   }
 
   &__slide-wr {

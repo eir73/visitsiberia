@@ -84,14 +84,18 @@
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
           <div class="list__items show">
-            <div class="list__item d-flex flex-column active">
+            <div
+              class="list__item d-flex flex-column active"
+              v-for="item of data"
+              :key="item.id"
+            >
               <a href="#" class="d-flex flex-column nop position-relative">
                 <img src="./img/item-top.svg" class="list__item-sign" alt="">
                 <div class="list__img">
                   <img src="./img/item-img.jpg" alt="">
                 </div>
                 <p class="list__name exo">
-                  Гостинница “Огни Енисея”
+                  {{ item.name }}
                 </p>
                 <p class="list__city">
                   <span class="material-icons">room&nbsp;</span>
@@ -102,7 +106,11 @@
                 <button class="list__button list__button-add">
                   Добавить
                 </button>
-                <button class="list__button list__button-star material-icons">
+                <button
+                  class="list__button list__button-star material-icons"
+                  @click="addToStorage(item.id)"
+                  :class="{'active' : localStorage.getItem('event_' + item.id) }"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
                     fill="black" width="30px" height="30px">
                     <g>
@@ -114,7 +122,7 @@
                 </button>
               </div>
             </div>
-            <div class="list__item d-flex flex-column">
+            <!-- <div class="list__item d-flex flex-column">
               <a href="#" class="d-flex flex-column nop">
                 <div class="list__img">
                   <img src="./img/item-img.jpg" alt="">
@@ -459,7 +467,7 @@
               <a href="#" class="list__button list__button-link">
                 Перейти к маршруту
               </a>
-            </div>
+            </div> -->
           </div>
           <div class="places__pagination pagination wow fadeInUp">
             <div class="pagination__page active">1</div>
@@ -480,19 +488,22 @@
 
   <script>
     const vue = new Vue({
-      el: 'places',
+      el: '#places',
       data() {
         return {
           data: []
         }
       },
       async mounted() {
-        const res = await fetch('url')
+        const res = await fetch('http://api.webcook.com.ua/public/api/attractions')
         const data = await res.json()
         // data is raw data from the server
-        this.data = data
+        this.data = data.data
       },
       methods: {
+        addToStorage(id) {
+          localStorage.setItem('event_' + id, true)
+        }
       }
     })
   </script>

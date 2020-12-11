@@ -1,15 +1,33 @@
 .index {
   &__header {
     position: relative;
-    height: calc(100vh - 74px);
+    min-height: calc(100vh - 74px);
     background-image: url(../img/main-top-bg.jpg);
     background-size: cover;
+
+    @media screen and (max-width: 1220px) {
+      padding-top: 40px;
+    }
   }
 
   &__socials {
     position: absolute;
     top: 50px;
     right: 95px;
+
+    @media screen and (max-width: 1650px) {
+      top: 25px;
+      right: 25px;
+    }
+
+    @media screen and (max-width: 1500px) {
+      top: 10px;
+      right: 10px;
+    }
+
+    @media screen and (max-width: 1440px) {
+      display: none !important;
+    }
   }
 
   &__social {
@@ -31,12 +49,37 @@
     }
   }
 
+  &__desktop {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: flex;
+    }
+  }
+
   &__heading {
     margin-bottom: 39px;
     font-weight: 200;
     font-size: 72px;
     line-height: 86px;
     color: $text-light;
+    padding: 0 15px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      font-size: 55px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 38px;
+      line-height: 38px;
+      margin-bottom: 4px;
+    }
   }
 
   &__transports {
@@ -51,6 +94,16 @@
     color: $text-light;
     background-color: transparent;
     transition: color ease 0.8s background-color ease 0.5s;
+
+    @media screen and (max-width: 575px) {
+      width: 41px;
+      height: 41px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+    }
 
     &:not(:last-child) {
       margin-right: 51px;
@@ -68,7 +121,7 @@
 
   &__constructor-wr {
     width: 1324px;
-    height: 112px;
+    min-height: 112px;
     padding-left: 30px;
     margin-bottom: 32px;
     background-color: $text-light;
@@ -76,6 +129,21 @@
 
     .heading__selects {
       margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 1350px) {
+      width: 1220px;
+    }
+
+    @media screen and (max-width: 1220px) {
+      width: 400px;
+      padding-left: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @media screen and (max-width: 575px) {
+      border-radius: 15px;
     }
   }
 
@@ -92,6 +160,19 @@
       cursor: pointer;
       transition: opacity ease 0.5s;
 
+      @media screen and (max-width: 1220px) {
+        height: 55px;
+      }
+
+      @media screen and (max-width: 575px) {
+        height: 38px;
+        min-width: 75px;
+
+        img {
+          width: 32px;
+        }
+      }
+
       &:hover {
         opacity: 0.8;
       }
@@ -104,16 +185,46 @@
     font-size: 30px;
     line-height: 38px;
     color: $text-light;
+    padding: 0 15px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 14px;
+    }
   }
 
   &__plans-wr, &__ways-wr, &__events-wr {
     padding: 240px 0;
+
+    @media screen and (max-width: 1220px) {
+      padding: 100px 0;
+    }
+
+    @media screen and (max-width: 575px) {
+      padding: 75px 0;
+    }
   }
 
   &__plans {
+    @media screen and (max-width: 1220px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
     &-info {
       width: 1180px;
       margin: 0 auto;
+
+      @media screen and (max-width: 1220px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     &-text {
@@ -122,11 +233,29 @@
       font-size: 30px;
       line-height: 38px;
       color: $dark-blue;
+
+      @media screen and (max-width: 1220px) {
+        margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 575px) {
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 46px;
+      }
     }
 
     &-plus {
       &:not(:last-child) {
         margin-bottom: 63px;
+      }
+
+      @media screen and (max-width: 575px) {
+        margin-bottom: 26px;
       }
     }
   }
@@ -136,6 +265,15 @@
     font-size: 48px;
     line-height: 58px;
     color: $dark-blue;
+
+    @media screen and (max-width: 767px) {
+      font-size: 38px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__number {
@@ -144,6 +282,12 @@
     font-size: 64px;
     line-height: 77px;
     color: #000000;
+
+    @media screen and (max-width: 575px) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-right: 26px;
+    }
   }
 
   &__title {
@@ -155,6 +299,28 @@
     line-height: 77px;
     color: $dark-blue;
 
+    @media screen and (max-width: 1220px) {
+      width: 100%;
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 45px;
+    }
+
+    @media screen and (max-width: 575px) {
+      width: auto;
+      margin-right: auto;
+      margin-left: 12px;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 32px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -164,17 +330,45 @@
       width: 1px;
       height: 90%;
       background-color: #599cc1;
+
+      @media screen and (max-width: 575px) {
+        top: 3px;
+        left: -9px;
+      }
     }
   }
 
   &__ways {
+    @media screen and (max-width: 1220px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media screen and (max-width: 575px) {
+      .index__title {
+        width: 270px;
+      }
+    }
     &-place {
       position: relative;
       width: 100%;
       margin-top: 125px;
 
+      @media screen and (max-width: 1220px) {
+        flex-direction: column !important;
+        align-items: center;
+      }
+
       &:first-child {
         margin-top: 150px;
+
+        @media screen and (max-width: 1220px) {
+          margin-top: 60px;
+        }
+      }
+
+      @media screen and (max-width: 1220px) {
+        margin-top: 70px;
       }
 
       &::before {
@@ -185,6 +379,11 @@
         width: 1px;
         height: 220px;
         background-color: #599CC1;
+
+        @media screen and (max-width: 1220px) {
+          height: 50px;
+          top: -60px;
+        }
       }
 
       &--left {
@@ -200,6 +399,11 @@
         font-weight: normal;
         font-size: 24px;
         line-height: 30px;
+
+        @media screen and (max-width: 1220px) {
+          margin-bottom: 0;
+          margin-top: 10px;
+        }
       }
 
       &-name {
@@ -207,12 +411,31 @@
         font-weight: 200;
         font-size: 36px;
         line-height: 43px;
+
+        @media screen and (max-width: 575px) {
+          padding: 0 20px;
+          text-align: center;
+          font-size: 20px;
+          line-height: 23px;
+        }
       }
 
       &-city {
         font-weight: normal;
         font-size: 24px;
         line-height: 30px;
+
+        @media screen and (max-width: 575px) {
+          font-size: 16px;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .material-icons {
+            font-size: 20px;
+          }
+        }
       }
     }
 
@@ -220,6 +443,10 @@
       margin: 0 35px;
       max-width: 540px;
       color: $dark-blue;
+
+      @media screen and (max-width: 1220px) {
+        text-align: center !important;
+      }
 
       &--right {
         text-align: right;
@@ -233,6 +460,15 @@
     &-img {
       width: calc(50% - 80px);
 
+      @media screen and (max-width: 991px) {
+        min-width: 500px;
+      }
+
+      @media screen and (max-width: 500px) {
+        min-width: calc(100% + 30px);
+        margin: 0 -15px;
+      }
+
       img {
         width: 100%;
       }
@@ -245,6 +481,12 @@
       line-height: 43px;
       color: $dark-blue;
       border-bottom: 1px solid $dark-blue;
+
+      @media screen and (max-width: 575px) {
+        margin-top: 0;
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -254,6 +496,10 @@
       padding-left: 150px;
       margin-bottom: 128px;
       width: 100%;
+
+      @media screen and (max-width: 1220px) {
+        padding-left: 60px;
+      }
     }
 
     &-slide {
@@ -300,5 +546,12 @@
     &-disabled {
       display: none;
     }
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .wow {
+    animation-name: none !important;
   }
 }
