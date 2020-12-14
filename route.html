@@ -507,7 +507,7 @@
   
   <script>
     var mySwiper = new Swiper('.swiper-container', {
-      spaceBetween: 136,
+      spaceBetween: 76,
       slidesPerView: 'auto',
       slidePrevClass: 'list__slide--prev',
      /* pagination: {
@@ -519,7 +519,17 @@
         hide: false,
         dragSize: 300,
       },
-
+      breakpoints: {
+        0: {
+          spaceBetween: 10
+        },
+        576: {
+          spaceBetween: 76
+        },
+        768: {
+          spaceBetween: 136,
+        }
+      },
       on: {
         init() {
           if (this.slides.length <= 3) {
