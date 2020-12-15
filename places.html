@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha512-uCQmAoax6aJTxC03VlH0uCEtE0iLi83TW1Qh6VezEZ5Y17rTrIE+8irz4H4ehM7Fbfbm8rb30OkxVkuwhXxrRg==" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=cffbde42-9a9e-4630-b8af-50781fa386c1&lang=ru_RU" type="text/javascript"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -192,7 +194,7 @@
           </div>
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-          map
+          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -311,6 +313,23 @@
   </footer>
 
   <script>
+    /*ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+        });
+    }*/
+  </script>
+
+  <script>
     const vue = new Vue({
       el: '#places',
       data() {
@@ -323,6 +342,64 @@
         const data = await res.json()
         // data is raw data from the server
         this.data = data.data
+
+        ymaps.ready(init);
+
+        function init () {
+          
+            var myMap = new ymaps.Map('map', {
+                center: [data.data[0].lat, data.data[0].lng],
+                zoom: 10
+            }, {
+                searchControlProvider: 'yandex#search'
+            })
+
+            var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            )
+            
+            for (let i = 0; i < data.data.length; i++) {
+              myPlacemark = new ymaps.Placemark([data.data[i].lat, data.data[i].lng], {
+                hintContent: 'Собственный значок метки',
+                balloonContent: 'Это красивая метка'
+              }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: './img/geo.svg',
+                // Размеры метки.
+                iconImageSize: [48, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+              })
+              myMap.geoObjects.add(myPlacemark)
+            }
+             /*   objectManager = new ymaps.ObjectManager({
+                    // Чтобы метки начали кластеризоваться, выставляем опцию.
+                    clusterize: true,
+                    // ObjectManager принимает те же опции, что и кластеризатор.
+                    gridSize: 32,
+                    clusterDisableClickZoom: true
+                });
+
+            // Чтобы задать опции одиночным объектам и кластерам,
+            // обратимся к дочерним коллекциям ObjectManager.
+            objectManager.objects.options.set('preset', 'islands#greenDotIcon');
+            objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+            myMap.geoObjects.add(objectManager);
+            console.log(data)
+            const point = data.data.map(el => {
+              return [el.lat, el.lng]
+            })
+            objectManager.add(point);*/
+
+}
       },
       methods: {
         addToStorage(id) {
