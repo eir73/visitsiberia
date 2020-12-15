@@ -512,7 +512,7 @@
         }
       },
       async mounted() {
-        const res = await fetch('http://api.webcook.com.ua/public/api/attractions')
+        const res = await fetch('https://api.webcook.com.ua/public/api/attractions')
         const data = await res.json()
         // data is raw data from the server
         this.data = data.data
