@@ -5,4 +5,8 @@
 .route {
   padding: 0 23px;
   overflow: hidden;
+
+  @media screen and (max-width: 576px) {
+    padding: 0 12px;
+  }
 }

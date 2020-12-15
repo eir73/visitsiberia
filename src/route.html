@@ -303,7 +303,7 @@
           </div>
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-          map
+          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -331,10 +331,16 @@
 
     $("#fourth").selectmenu();
   </script>
+
+  <script>
+    const key = 'cffbde42-9a9e-4630-b8af-50781fa386c1'
+
+
+  </script>
   
   <script>
     var mySwiper = new Swiper('.swiper-container', {
-      spaceBetween: 136,
+      spaceBetween: 76,
       slidesPerView: 'auto',
       slidePrevClass: 'list__slide--prev',
      /* pagination: {
@@ -346,13 +352,25 @@
         hide: false,
         dragSize: 300,
       },
-
+      breakpoints: {
+        0: {
+          spaceBetween: 10
+        },
+        576: {
+          spaceBetween: 76
+        },
+        768: {
+          spaceBetween: 136,
+        }
+      },
       on: {
         init() {
           if (this.slides.length <= 3) {
-            this.allowSlideNext = false
-            this.allowSlidePrev = false
-            this.scrollbar.el.destroy()
+            if (window.innerWidth > 1440) {
+              this.allowSlideNext = false
+              this.allowSlidePrev = false
+              this.scrollbar.el.destroy()
+            }
           }
         }
       }

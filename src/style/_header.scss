@@ -9,12 +9,17 @@
   }
 
   &-collapse {
-    @media screen and (max-width: 992px) {
-      min-width: 100vw;
-      width: 100vw;
-      height: 100vh;
-      min-height: 100vh;
-      background-color: #fff;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #fff;
+
+    @media screen and (min-width: 992px) {
+      min-width: unset;
+      width: unset;
+      height: unset;
+      min-height: unset;
     }
   }
 }

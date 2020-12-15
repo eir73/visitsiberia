@@ -7,9 +7,28 @@
     font-size: 120px;
     text-align: center;
     line-height: 144px;
+    @media screen and (max-width: 992px) {
+      font-size: 100px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 42px;
+    }
   }
 
   &__tabs {
     margin-bottom: 147px;
+  }
+
+  .tab-pane {
+    padding: 0 23px;
+
+    @media screen and (max-width: 576px) {
+      padding: 0 13px;
+    }
   }
 }
