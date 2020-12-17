@@ -87,9 +87,12 @@
           <div class="heading__select" id="heading-first">
             <select id="first">
               <option disabled="disabled" selected="selected">Тип отдыха</option>
-              <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">Активно-приключенческий</option>
-              <option title=" Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">Спокойный отдых</option>
-              <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">Культурно-познавательный</option>
+              <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">
+                Активно-приключенческий</option>
+              <option title=" Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">
+                Спокойный отдых</option>
+              <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">
+                Культурно-познавательный</option>
             </select>
           </div>
           <div class="heading__select" id="heading-second">
@@ -127,77 +130,77 @@
             </select>
           </div>
         </div>
-    </div>
-    <script>
-      $(function () {
-        $("#first").selectmenu();
+      </div>
+      <script>
+        $(function () {
+          $("#first").selectmenu();
 
-        $("#second").selectmenu();
+          $("#second").selectmenu();
 
-        $("#third").selectmenu()
+          $("#third").selectmenu()
 
-        $("#fourth").selectmenu();
-      });
-    </script>
-    <div class="places__items list">
-      <ul class="nav nav-pills list__tabs wow fadeInUp" id="pills-tab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Список</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">На карте</a>
-        </li>
-        <li class="nav-item ml-auto">
-          <p class="list__size">
-            Показано: 122 результата
-          </p>
-        </li>
-      </ul>
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-          <div class="list__items show">
-            <div class="list__item d-flex flex-column active" v-for="item of data" :key="item.id">
-              <a href="#" class="d-flex flex-column nop position-relative">
-                <img src="./img/item-top.svg" class="list__item-sign" alt="">
-                <div class="list__img">
-                  <img src="./img/item-img.jpg" alt="">
+          $("#fourth").selectmenu();
+        });
+      </script>
+      <div class="places__items list">
+        <ul class="nav nav-pills list__tabs wow fadeInUp" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Список</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">На карте</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <p class="list__size">
+              Показано: 122 результата
+            </p>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="list__items show">
+              <div class="list__item d-flex flex-column active" v-for="item of data" :key="item.id">
+                <a href="#" class="d-flex flex-column nop position-relative">
+                  <img src="./img/item-top.svg" class="list__item-sign" alt="">
+                  <div class="list__img">
+                    <img src="./img/item-img.jpg" alt="">
+                  </div>
+                  <p class="list__name exo">
+                    {{ item.name }}
+                  </p>
+                  <p class="list__city">
+                    <span class="material-icons">room&nbsp;</span>
+                    с. Парная
+                  </p>
+                </a>
+                <div class="list__buttons d-flex flex-row align-items-center">
+                  <button class="list__button list__button-add">
+                    Добавить
+                  </button>
+                  <button class="list__button list__button-star material-icons" @click="addToStorage(item.id)" :class="{'active' : localStorage.getItem('event_' + item.id) }">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="30px" height="30px">
+                      <g>
+                        <rect fill="none" height="24" width="24"/>
+                        <path d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z"/>
+                      </g>
+                    </svg>
+                  </button>
                 </div>
-                <p class="list__name exo">
-                  {{ item.name }}
-                </p>
-                <p class="list__city">
-                  <span class="material-icons">room&nbsp;</span>
-                  с. Парная
-                </p>
-              </a>
-              <div class="list__buttons d-flex flex-row align-items-center">
-                <button class="list__button list__button-add">
-                  Добавить
-                </button>
-                <button class="list__button list__button-star material-icons" @click="addToStorage(item.id)" :class="{'active' : localStorage.getItem('event_' + item.id) }">
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="30px" height="30px">
-                    <g>
-                      <rect fill="none" height="24" width="24"/>
-                      <path d="M14.43,10l-1.47-4.84c-0.29-0.95-1.63-0.95-1.91,0L9.57,10H5.12c-0.97,0-1.37,1.25-0.58,1.81l3.64,2.6l-1.43,4.61 c-0.29,0.93,0.79,1.68,1.56,1.09L12,17.31l3.69,2.81c0.77,0.59,1.85-0.16,1.56-1.09l-1.43-4.61l3.64-2.6 c0.79-0.57,0.39-1.81-0.58-1.81H14.43z"/>
-                    </g>
-                  </svg>
-                </button>
               </div>
+              
             </div>
-            
+            <div class="places__pagination pagination wow fadeInUp">
+              <div class="pagination__page active">1</div>
+              <div class="pagination__page">2</div>
+              <div class="pagination__page">3</div>
+              <div class="pagination__page">4</div>
+            </div>
           </div>
-          <div class="places__pagination pagination wow fadeInUp">
-            <div class="pagination__page active">1</div>
-            <div class="pagination__page">2</div>
-            <div class="pagination__page">3</div>
-            <div class="pagination__page">4</div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div id="map"></div>
           </div>
-        </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-          <div id="map"></div>
         </div>
       </div>
-    </div>
     </div>
   </main>
 
@@ -297,93 +300,240 @@
   </footer>
 
   <script>
-    /*ymaps.ready(init);
-    function init(){
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
-            center: [55.76, 37.64],
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 7
-        });
-    }*/
-  </script>
-
-  <script>
     const vue = new Vue({
       el: '#places',
       data() {
         return {
-          data: []
+          data: [],
+          json: {
+            "data": [{
+              "id": 1,
+              "name": "Fredrick Hintz PhD",
+              "lat": "49.839",
+              "lng": "23.996",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 2,
+              "name": "Alisha Crooks",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 3,
+              "name": "Prof. Terrance Bergstrom V",
+              "lat": "49.83689645",
+              "lng": "23.97694559",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 4,
+              "name": "Ms. Kariane Kshlerin",
+              "lat": "49.83261679",
+              "lng": "24.06766883",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 5,
+              "name": "Annabell Raynor",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 6,
+              "name": "Marjolaine Veum",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 7,
+              "name": "Noelia Schneider",
+              "lat": "49.839",
+              "lng": "23.996",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 8,
+              "name": "Ms. Eudora Olson",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 9,
+              "name": "Jadyn Tromp",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 10,
+              "name": "Hubert Walsh",
+              "lat": "49.839",
+              "lng": "23.996",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 11,
+              "name": "Lillian Kulas",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 12,
+              "name": "Andreane Ziemann",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 13,
+              "name": "River Leuschke",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 14,
+              "name": "Kristian Champlin",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 15,
+              "name": "Ms. Lavinia Langworth III",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 16,
+              "name": "Ottis Batz",
+              "lat": "49.839",
+              "lng": "23.996",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 17,
+              "name": "Rozella Upton",
+              "lat": "49.86744433",
+              "lng": "24.00216686",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 18,
+              "name": "Miss Queen Wisozk PhD",
+              "lat": "49.81126022",
+              "lng": "23.9980526",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 19,
+              "name": "Connie Heller",
+              "lat": "49.839",
+              "lng": "23.996",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 20,
+              "name": "Miss Michaela Konopelski",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 21,
+              "name": "Estella Maggio",
+              "lat": "49.839",
+              "lng": "23.995",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 22,
+              "name": "Jakayla Bailey",
+              "lat": "49.792",
+              "lng": "24.064",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 23,
+              "name": "Amalia Emmerich DDS",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }, {
+              "id": 24,
+              "name": "Kaley Hayes",
+              "lat": "49.83524",
+              "lng": "24.03517",
+              "image": "https://api.webcook.com.ua/public/front/img/Tepsey-img1.png"
+            }],
+            "links": {
+              "first": "https://api.webcook.com.ua/public/api/attractions?page=1",
+              "last": "https://api.webcook.com.ua/public/api/attractions?page=5",
+              "prev": null,
+              "next": "https://api.webcook.com.ua/public/api/attractions?page=2"
+            },
+            "meta": {
+              "current_page": 1,
+              "from": 1,
+              "last_page": 5,
+              "links": [{
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+              }, {
+                "url": "https://api.webcook.com.ua/public/api/attractions?page=1",
+                "label": 1,
+                "active": true
+              }, {
+                "url": "https://api.webcook.com.ua/public/api/attractions?page=2",
+                "label": 2,
+                "active": false
+              }, {
+                "url": "https://api.webcook.com.ua/public/api/attractions?page=3",
+                "label": 3,
+                "active": false
+              }, {
+                "url": "https://api.webcook.com.ua/public/api/attractions?page=4",
+                "label": 4,
+                "active": false
+              }, {
+                "url": "https://api.webcook.com.ua/public/api/attractions?page=5",
+                "label": 5,
+                "active": false
+              }, {
+                "url": "https://api.webcook.com.ua/public/api/attractions?page=2",
+                "label": "Next &raquo;",
+                "active": false
+              }],
+              "path": "https://api.webcook.com.ua/public/api/attractions",
+              "per_page": 24,
+              "to": 24,
+              "total": 100
+            }
+          }
         }
       },
       async mounted() {
-        const res = await fetch('https://api.webcook.com.ua/public/api/attractions')
-        const data = await res.json()
-        // data is raw data from the server
-        this.data = data.data
+        //const res = await fetch('https://api.webcook.com.ua/public/api/attractions')
+        //const data = await res.json()
+        const data = this.json
 
         ymaps.ready(init);
 
-        function init () {
-          
-            var myMap = new ymaps.Map('map', {
-                center: [data.data[0].lat, data.data[0].lng],
-                zoom: 10
-            }, {
-                searchControlProvider: 'yandex#search'
-            })
+        function init() {
 
-            var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          var myMap = new ymaps.Map('map', {
+            center: [data.data[0].lat, data.data[0].lng],
+            zoom: 10
+          }, {
+            searchControlProvider: 'yandex#search'
+          })
+
+          var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-            )
-            
-            for (let i = 0; i < data.data.length; i++) {
-              myPlacemark = new ymaps.Placemark([data.data[i].lat, data.data[i].lng], {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
-              }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#imageWithContent',
-                // Своё изображение иконки метки.
-                iconImageHref: './img/geo.svg',
-                // Размеры метки.
-                iconImageSize: [48, 48],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [-24, -24],
-                // Смещение слоя с содержимым относительно слоя с картинкой.
-                iconContentOffset: [15, 15],
-                // Макет содержимого.
-                iconContentLayout: MyIconContentLayout
-              })
-              myMap.geoObjects.add(myPlacemark)
-            }
-             /*   objectManager = new ymaps.ObjectManager({
-                    // Чтобы метки начали кластеризоваться, выставляем опцию.
-                    clusterize: true,
-                    // ObjectManager принимает те же опции, что и кластеризатор.
-                    gridSize: 32,
-                    clusterDisableClickZoom: true
-                });
+          )
 
-            // Чтобы задать опции одиночным объектам и кластерам,
-            // обратимся к дочерним коллекциям ObjectManager.
-            objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-            objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
-            myMap.geoObjects.add(objectManager);
-            console.log(data)
-            const point = data.data.map(el => {
-              return [el.lat, el.lng]
+          for (let i = 0; i < data.data.length; i++) {
+            myPlacemark = new ymaps.Placemark([data.data[i].lat, data.data[i].lng], {
+              hintContent: 'Собственный значок метки',
+              balloonContent: 'Это красивая метка'
+            }, {
+              // options
+              iconLayout: 'default#imageWithContent',
+              iconImageHref: './img/geo.svg',
+              iconImageSize: [48, 48],
+              iconImageOffset: [-24, -24],
+              iconContentOffset: [15, 15],
+              iconContentLayout: MyIconContentLayout
             })
-            objectManager.add(point);*/
-
-}
+            myMap.geoObjects.add(myPlacemark)
+          }
+        }
       },
       methods: {
         addToStorage(id) {
