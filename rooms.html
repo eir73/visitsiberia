@@ -44,7 +44,7 @@
               <a class="nav-link" href="./route.html">Маршруты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./places.html">Объекты</a>
+              <a class="nav-link" href="./places.html">Достопримечательности</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./events.html">События</a>
@@ -85,30 +85,23 @@
         <h1 class="heading__title">Проживание</h1>
         <div class="heading__selects heading__selects--rooms">
           <div class="heading__select" id="heading-first">
-            <select class="heading__select" id="first">
-              <option disabled="disabled" selected="selected">Город</option>
-              <option>Активно</option>
-              <option>Спокойный</option>
-              <option>Культурно</option>
-              <option>Озера, реки и водопады</option>
-              <option>Горы и скалы</option>
-              <option>Места силы</option>
-              <option>Храмы и святыни</option>
-              <option>Парки и заповедники</option>
-              <option>Городские пространства</option>
-              <option>Музеи</option>
-              <option>Скульптура и архитектура</option>
-            </select>
+            <input id="first" autocomplete="off" placeholder="Сроки" readonly="readonly">
           </div>
+          <select class="heading__select" id="second">
+            <option disabled="disabled" selected="selected">Город</option>
+            <option>Активно</option>
+            <option>Спокойный</option>
+            <option>Культурно</option>
+            <option>Озера, реки и водопады</option>
+            <option>Горы и скалы</option>
+            <option>Места силы</option>
+            <option>Храмы и святыни</option>
+            <option>Парки и заповедники</option>
+            <option>Городские пространства</option>
+            <option>Музеи</option>
+            <option>Скульптура и архитектура</option>
+          </select>
           <div class="heading__select" id="heading-second">
-            <select class="heading__select" id="second">
-              <option disabled="disabled" selected="selected">Расстояние</option>
-              <option>&lt; 1км от центра</option>
-              <option>&lt; 3км от центра</option>
-              <option>&lt; 5км от центра</option>
-            </select>
-          </div>
-          <div class="heading__select" id="heading-third">
             <select class="heading__select" id="third">
               <option disabled="disabled" selected="selected">Тип размещения</option>
               <option>Отели</option>
@@ -118,15 +111,38 @@
               <option>Гостиницы для животных</option>
             </select>
           </div>
+          <div class="heading__select" id="heading-third">
+            <select class="heading__select" id="fourth">
+              <option disabled="disabled" selected="selected">С кем</option>
+              <option>Один или вдвоем</option>
+              <option>С ребенком до 3 лет</option>
+              <option>С ребенком до 10 лет</option>
+              <option>С подростком</option>
+              <option>Вся семья</option>
+              <option>Компания от 4-х человек</option>
+            </select>
+          </div>
         </div>
       </div>
       <script>
         $(function () {
-          $("#first").selectmenu();
+          $('#first').datepick({ 
+            yearRange:'c-0:c+2',
+            firstDay: 1,
+            multiSelect: 2,
+            multiSeparator: ' — ',
+            dateFormat: 'd M yyyyy',
+            dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
+            'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+            monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'], 
+          });
 
           $("#second").selectmenu();
 
           $("#third").selectmenu()
+          $("#fourth").selectmenu()
         });
       </script>
       <div class="rooms__items list">
@@ -526,7 +542,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__content justify-content-between flex-wrap">
+    <div class="footer__content flex-wrap">
       <div class="footer__nav">
         <div class="footer__col">
           <p class="footer__col-name">
@@ -569,22 +585,6 @@
               <img src="./img/ok-c.svg" alt="odnoklassniki">
             </a>
           </div>
-        </div>
-        <div class="footer__col footer__contacts ml-auto mr-auto">
-          <p class="footer__col-name">
-            Контакты
-          </p>
-          <ul class="footer__col-list pl-0">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Полезные контакты</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Обратная связь</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Туристические центры края</a>
-            </li>
-          </ul>
         </div>
       </div>
       <div class="footer__col footer__mob-first">
