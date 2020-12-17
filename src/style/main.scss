@@ -170,3 +170,10 @@ a {
   height: 600px;
   margin-bottom: 100px;
 }
+
+input#first.is-datepick {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 12px !important;
+}

@@ -31,37 +31,28 @@
         <p class="index__tagline index__mobile">
           Постройте маршрут и отправляйтесь в путешествие!
         </p>
-        <div class="index__transports d-flex flex-row">
-          <button class="btn material-icons index__transport">
-            directions_car
-          </button>
-          <button class="btn material-icons active index__transport">
-            directions_bus
-          </button>
-          <button class="btn material-icons index__transport">
-            directions_walk
-          </button>
-        </div>
         <div class="index__constructor-wr">
           <div class="index__constructor">
             <div class="heading__selects heading__selects--index">
               <div class="heading__select">
                 <input 
-                id="first" 
-                autocomplete="off" 
-                placeholder="Начало пути — Финиш"
-                readonly
+                  id="first" 
+                  autocomplete="off" 
+                  placeholder="Сроки"
+                  readonly
                 >
               </div>
-              <select id="second">
-                <option disabled selected>Сколько дней</option>
-                <option>1 - 3 дней</option>
-                <option>3 - 7 дней</option>
-                <option>7 - 10 дней</option>
-                <option>10 - 15 дней</option>
-                <option>15 - 25 дней</option>
-                <option>25+ дней</option>
-              </select>
+              <div class="index__transports d-flex flex-row">
+                <button class="btn material-icons index__transport">
+                  directions_car
+                </button>
+                <button class="btn material-icons active index__transport">
+                  directions_bus
+                </button>
+                <button class="btn material-icons index__transport">
+                  directions_walk
+                </button>
+              </div>
               <select id="third">
                 <option disabled selected>С кем</option>
                 <option>Один или вдвоем</option>

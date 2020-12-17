@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 90px;
-  height: 620px;
+  height: 520px;
   padding: 0 55px;
   color: $dark-blue;
 
@@ -25,6 +25,32 @@
     @media screen and (max-width: 576px) {
       font-size: 42px;
     }
+
+    &--big {
+      @media screen and (max-width: 1350px) {
+        font-size: 80px;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 60px;
+      }
+
+      @media screen and (max-width: 667px) {
+        font-size: 36px;
+      }
+
+      @media screen and (max-width: 425px) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &__select {
+    @media screen and (max-width: 1220px) {
+      span {
+        max-width: 100% !important;
+      }
+    }
   }
 
   &__selects {
@@ -39,6 +65,7 @@
       align-items: center;
       height: unset;
       min-width: unset;
+      margin-left: -55px;
     }
 
     &--places { 
@@ -48,15 +75,62 @@
     }
 
     &--rooms {
-      #second-button {
-        width: 250px !important;
+      input#first {
+        width: 312px;
+        border: none !important;
+        // max-width: 300px !important;
+         padding: 10px 12px 10px 25px !important;
+         flex-grow: 1;
+         background-color: transparent !important;
+         outline: none !important;
+         font-weight: 600 !important;
+         font-size: 24px;
+         line-height: 41px;
+         color: $dark-blue !important;
+         border-radius: 15px !important;
+         transition: background-color ease 0.5s;
+
+         @media screen and (max-width: 1350px) {
+          font-size: 22px;
+          width: 292px;
+        }
+        &::placeholder { 
+          color: $dark-blue;
+          opacity: 1;
+        }
+        
+        &:-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        
+        &::-ms-input-placeholder { 
+          color: $dark-blue;
+        }
+        &:hover {
+          background-color: rgba(256, 256, 256, 0.5) !important;
+        }
+        
+        &:focus {
+          margin-bottom: -1px;
+          background-color: #fff !important;
+          border-bottom-left-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        }
+      }
+      #third-button {
+        width: 270px !important;
       }
     }
     
     &--meal {
 
-      #heading-first, #first-button {
-        width: 260px !important;
+      #heading-first, #first-menu, #first-button {
+        width: 282px !important;
+
+        @media screen and (max-width: 1220px) {
+          width: 260px !important;
+        }
       }
 
       #heading-second, #second-button {
@@ -65,6 +139,12 @@
 
       #heading-third, #third-button {
         width: 260px !important;
+      }
+
+      @media screen and (max-width: 1220px) { 
+        #heading-fourth, #fourth-button {
+          width: 260px !important;
+        }
       }
     }
     
@@ -476,6 +556,11 @@
       height: 40px !important;
       margin-bottom: 5px;
       border-radius: 15px !important;
+    }
+
+    @media screen and (max-width: 425px) {
+      min-width: 99% !important;
+      margin-left: 0.5%;
     }
 
     .ui-selectmenu-text {
