@@ -255,7 +255,7 @@
         </div>
 
         <div class="article__map-wrap">
-          <img src="/img/Rectangle126.png" alt="Map" class="article__map">
+          <div id="map"></div>
         </div>
       </section>
 
@@ -972,6 +972,40 @@
     <script src="./js/jquery.datepick.js"></script>
     <script src="./js/index.js"></script>
   </footer>
+
+  <script>
+    ymaps.ready(init);
+
+function init() {
+
+  var myMap = new ymaps.Map('map', {
+    center: [item.lat, item.lng],
+    zoom: 10
+  }, {
+    searchControlProvider: 'yandex#search'
+  })
+
+  var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  )
+
+
+    myPlacemark = new ymaps.Placemark([item.lat, item.lng], {
+      hintContent: 'Собственный значок метки',
+      balloonContent: 'Это красивая метка'
+    }, {
+      // options
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: './img/geo.svg',
+      iconImageSize: [48, 48],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: MyIconContentLayout
+    })
+    myMap.geoObjects.add(myPlacemark)
+  
+}
+  </script>
 </body>
 
 </html>
