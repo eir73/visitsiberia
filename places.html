@@ -324,26 +324,35 @@
   <script>
     ymaps.ready(init);
 
-    function init() {
-        // data.data = {{$places}}
-      var myMap = new ymaps.Map('map', {
-        center: [data.data[0].lat, data.data[0].lng],
-        zoom: 10
-      }, {
-        searchControlProvider: 'yandex#search'
-      })
+function init() {
 
-      var multiRoute = new ymaps.multiRouter.MultiRoute({
-        referencePoints: data.data.map(el => {
-          return [el.lat, el.lng]
-        }),
-        params: {
-          results: 1
-        }
-      });
+  var myMap = new ymaps.Map('map', {
+    center: [data.data[0].lat, data.data[0].lng],
+    zoom: 10
+  }, {
+    searchControlProvider: 'yandex#search'
+  })
 
-    myMap.geoObjects.add(multiRoute);
+  var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  )
+
+  for (let i = 0; i < data.data.length; i++) {
+    myPlacemark = new ymaps.Placemark([data.data[i].lat, data.data[i].lng], {
+      hintContent: 'Собственный значок метки',
+      balloonContent: 'Это красивая метка'
+    }, {
+      // options
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: './img/geo.svg',
+      iconImageSize: [48, 48],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: MyIconContentLayout
+    })
+    myMap.geoObjects.add(myPlacemark)
   }
+}
   </script>
 </body>
 

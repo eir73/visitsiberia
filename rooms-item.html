@@ -971,6 +971,31 @@
     <script src="./js/jquery.datepick.js"></script>
     <script src="./js/index.js"></script>
   </footer>
+
+  <script>
+     ymaps.ready(init);
+
+function init() {
+    // data.data = {{$places}}
+  var myMap = new ymaps.Map('map', {
+    center: [data.data[0].lat, data.data[0].lng],
+    zoom: 10
+  }, {
+    searchControlProvider: 'yandex#search'
+  })
+
+  var multiRoute = new ymaps.multiRouter.MultiRoute({
+    referencePoints: data.data.map(el => {
+      return [el.lat, el.lng]
+    }),
+    params: {
+      results: 1
+    }
+  });
+
+  myMap.geoObjects.add(multiRoute);
+  }
+  </script>
 </body>
 
 </html>
