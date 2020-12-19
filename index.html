@@ -81,7 +81,7 @@
 
   <main class="main" id="index">
     <div class="index d-flex flex-column" id="index-vue">
-    <div class="index__header d-flex flex-column align-items-center justify-content-center">
+      <div class="index__header d-flex flex-column align-items-center justify-content-center">
         <h1 class="index__tagline">
           Постройте маршрут и отправляйтесь в путешествие!
         </h1>
@@ -91,17 +91,12 @@
               <div class="heading__select">
                 <input id="first" autocomplete="off" placeholder="Сроки" readonly="readonly">
               </div>
-              <div class="index__transports d-flex flex-row">
-                <button class="btn material-icons index__transport">
-                  directions_car
-                </button>
-                <button class="btn material-icons active index__transport">
-                  directions_bus
-                </button>
-                <button class="btn material-icons index__transport">
-                  directions_walk
-                </button>
-              </div>
+              <select id="second">
+                <option disabled="disabled" selected="selected">Транспорт</option>
+                <option>Машина</option>
+                <option>Автобус</option>
+                <option>Пешком</option>
+              </select>
               <select id="third">
                 <option disabled="disabled" selected="selected">С кем</option>
                 <option>Один или вдвоем</option>
@@ -113,9 +108,12 @@
               </select>
               <select id="fourth">
                 <option disabled="disabled" selected="selected">Тип отдыха</option>
-                <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">Активно-приключенческий</option>
-                <option title="Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">Спокойный отдых</option>
-                <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">Культурно-познавательный</option>  
+                <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">
+                  Активно-приключенческий</option>
+                <option title="Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">
+                  Спокойный отдых</option>
+                <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">
+                  Культурно-познавательный</option>
               </select>
               <button id="index__submit">
                 <img src="./img/index-arrow.svg" alt="">
@@ -403,29 +401,46 @@
     <script src="./js/index.js"></script>
   </footer>
   <script>
-        $('#first').datepick({ 
-      yearRange:'c-0:c+2',
+    $('#first').datepick({
+      onSelect: function (dates) {
+        console.log(dates);
+      },
+      yearRange: 'c-0:c+2',
       firstDay: 1,
       multiSelect: 2,
       multiSeparator: ' — ',
       dateFormat: 'd M yyyyy',
       dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
       monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
-     'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
-     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
-    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'], 
+        'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+      ],
+      monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+      ],
     });
 
     $("#second").selectmenu();
     $("#third").selectmenu()
     $("#fourth").selectmenu();
-  </script>
-  <script>
-    const indexVue = new Vue({
-      el: 'index-vue',
-      mounted() {
-        //console.log('VUE!')
-      }
+
+    let first = $('#first')
+    let second = $('#second')
+    let third = $('#third')
+    let fourth = $('#fourth')
+
+    first.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
+    second.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+      //тут нужно будет применять indexOf у массива вариантов селекта,
+      //чтобы следить за измененяиями
+    })
+    third.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
+    fourth.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
     })
   </script>
 </body>

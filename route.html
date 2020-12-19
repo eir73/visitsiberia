@@ -88,13 +88,10 @@
             <input id="first" autocomplete="off" placeholder="Сроки" readonly="readonly">
           </div>
           <select id="second">
-            <option disabled="disabled" selected="selected">Сколько дней</option>
-            <option>1 - 3 дней</option>
-            <option>3 - 7 дней</option>
-            <option>7 - 10 дней</option>
-            <option>10 - 15 дней</option>
-            <option>15 - 25 дней</option>
-            <option>25+ дней</option>
+            <option disabled="disabled" selected="selected">Транспорт</option>
+            <option>Машина</option>
+            <option>Автобус</option>
+            <option>Пешком</option>
           </select>
           <select id="third">
             <option disabled="disabled" selected="selected">С кем</option>
@@ -471,7 +468,8 @@
     <script src="./js/index.js"></script>
   </footer>
   <script>
-    $('#first').datepick({ 
+    $('#first').datepick({
+      onSelect: function(dates) { console.log(dates); },
       yearRange:'c-0:c+2',
       firstDay: 1,
       multiSelect: 2,
@@ -489,12 +487,28 @@
     $("#third").selectmenu()
 
     $("#fourth").selectmenu();
+
+    let first = $('#first')
+    let second = $('#second')
+    let third = $('#third')
+    let fourth = $('#fourth')
+
+    second.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+      //тут нужно будет применять indexOf у массива вариантов селекта,
+      //чтобы следить за измененяиями
+    })
+    third.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
+    fourth.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
+    
   </script>
 
   <script>
     const key = 'cffbde42-9a9e-4630-b8af-50781fa386c1'
-
-
   </script>
   
   <script>
@@ -502,10 +516,6 @@
       spaceBetween: 76,
       slidesPerView: 'auto',
       slidePrevClass: 'list__slide--prev',
-     /* pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
-      },*/
       scrollbar: {
         el: '.swiper-scrollbar',
         hide: false,
@@ -528,7 +538,7 @@
             if (window.innerWidth > 1440) {
               this.allowSlideNext = false
               this.allowSlidePrev = false
-              this.scrollbar.el.destroy()
+              this.scrollbar.el && this.scrollbar.el.destroy()
             }
           }
         }
@@ -537,22 +547,28 @@
   </script>
 
 <script>
-  const vue = new Vue({
-    el: 'route',
-    data() {
-      return {
-        data: []
+ /* ymaps.ready(init);
+
+  function init() {
+      // data.data = {{$places}}
+    var myMap = new ymaps.Map('map', {
+      center: [data.data[0].lat, data.data[0].lng],
+      zoom: 10
+    }, {
+      searchControlProvider: 'yandex#search'
+    })
+
+    var multiRoute = new ymaps.multiRouter.MultiRoute({
+      referencePoints: data.data.map(el => {
+        return [el.lat, el.lng]
+      }),
+      params: {
+        results: 1
       }
-    },
-    async mounted() {
-      const res = await fetch('url')
-      const data = await res.json()
-      // data is raw data from the server
-      this.data = data
-    },
-    methods: {
-    }
-  })
+    });
+
+  myMap.geoObjects.add(multiRoute);
+}*/
 </script>
 </body>
 

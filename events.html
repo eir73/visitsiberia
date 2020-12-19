@@ -283,7 +283,8 @@
       maxPicks: 2,
     });*/
 
-    $('#first').datepick({ 
+    $('#first').datepick({
+      onSelect: function(dates) { console.log(dates); },
       yearRange:'c-0:c+2',
       firstDay: 1,
       multiSelect: 2,
@@ -299,34 +300,50 @@
     $("#second").selectmenu();
     $("#third").selectmenu()
     $("#fourth").selectmenu();
+
+    let first = $('#first')
+    let second = $('#second')
+    let third = $('#third')
+    let fourth = $('#fourth')
+
+    first.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
+    second.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+      //тут нужно будет применять indexOf у массива вариантов селекта,
+      //чтобы следить за измененяиями
+    })
+    third.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
+    fourth.on('selectmenuchange', e => {
+      console.log(e.toElement.innerHTML)
+    })
   </script>
   <script>
-    const events = new Vue({
-      el: 'events',
-      data() {
-        return {
-          events: [],
-          a: 10,
-          filters: []
-        }
-      },
-      async mounted() {
-        const res = await fetch('url')
-        const data = await res.json()
-        // data is raw data from the server
-        this.events = data
-        await this.fetchFilters()
-      },
-      methods: {
-        async fetchFilters() {
-          const res = await fetch('http://api.webcook.com.ua/public/api/dictionaries')
-          const data = await res.json()
+    ymaps.ready(init);
 
-          this.filters = data.data
-          console.log(this.filters)
+    function init() {
+        // data.data = {{$places}}
+      var myMap = new ymaps.Map('map', {
+        center: [data.data[0].lat, data.data[0].lng],
+        zoom: 10
+      }, {
+        searchControlProvider: 'yandex#search'
+      })
+
+      var multiRoute = new ymaps.multiRouter.MultiRoute({
+        referencePoints: data.data.map(el => {
+          return [el.lat, el.lng]
+        }),
+        params: {
+          results: 1
         }
-      }
-    })
+      });
+
+    myMap.geoObjects.add(multiRoute);
+  }
   </script>
 </body>
 
