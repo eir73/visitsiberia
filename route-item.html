@@ -259,7 +259,7 @@
         </div>
 
         <div class="article__map-wrap">
-          <img src="/img/Rectangle126.png" alt="Map" class="article__map">
+          <div id="map"></div>
         </div>
       </section>
 
@@ -976,6 +976,40 @@
     <script src="./js/jquery.datepick.js"></script>
     <script src="./js/index.js"></script>
   </footer>
+
+
+  <script>
+    $('a[href^="#"]').click(function(e) {
+      e.preventDefault()
+      var target = $(this).attr('href');
+      $('html').animate({scrollTop: $(target).offset().top - 130 }, 900);
+    })
+  </script>
+
+  <script>
+    ymaps.ready(init);
+  
+    function init() {
+        let route = [{lat: 12.23, lng: 12.34}, {lat:12.32, lng: 12.6}]
+      var myMap = new ymaps.Map('map', {
+        center: [route[0].lat, route[0].lng],
+        zoom: 10
+      }, {
+        searchControlProvider: 'yandex#search'
+      })
+  
+      var multiRoute = new ymaps.multiRouter.MultiRoute({
+        referencePoints: route.map(el => {
+          return [el.lat, el.lng]
+        }),
+        params: {
+          results: 1
+        }
+      });
+  
+    myMap.geoObjects.add(multiRoute);
+  }
+  </script>
 </body>
 
 </html>

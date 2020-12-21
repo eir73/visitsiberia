@@ -125,7 +125,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="meal__items list">
         <ul class="nav nav-pills list__tabs" id="pills-tab" role="tablist">
           <li class="nav-item">
@@ -503,7 +503,7 @@
             </div>
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            map
+            <div id="map"></div>
           </div>
         </div>
       </div>
@@ -604,8 +604,8 @@
     <script src="./js/jquery.datepick.js"></script>
     <script src="./js/index.js"></script>
   </footer>
-  
-  
+
+
   <script>
     $(function () {
       $("#first").selectmenu();
@@ -642,25 +642,43 @@
     ymaps.ready(init);
 
     function init() {
-        // data.data = {{$places}}
+      var items = [{
+          lat: 12.2345,
+          lng: 43.2345
+        },
+        {
+          lat: 13.43,
+          lng: 32.23
+        }
+      ]
       var myMap = new ymaps.Map('map', {
-        center: [data.data[0].lat, data.data[0].lng],
+        center: [items[0].lat, items[0].lng],
         zoom: 10
       }, {
         searchControlProvider: 'yandex#search'
       })
 
-      var multiRoute = new ymaps.multiRouter.MultiRoute({
-        referencePoints: data.data.map(el => {
-          return [el.lat, el.lng]
-        }),
-        params: {
-          results: 1
-        }
-      });
-
-    myMap.geoObjects.add(multiRoute);
-  }
+      var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      )
+      for (let i = 0; i < items.length; i++) {
+        let item = items[i]
+     
+        myPlacemark = new ymaps.Placemark([item.lat, item.lng], {
+          hintContent: 'Собственный значок метки',
+          balloonContent: 'Это красивая метка'
+        }, {
+          // options
+          iconLayout: 'default#imageWithContent',
+          iconImageHref: './img/geo.svg',
+          iconImageSize: [48, 48],
+          iconImageOffset: [-24, -24],
+          iconContentOffset: [15, 15],
+          iconContentLayout: MyIconContentLayout
+        })
+        myMap.geoObjects.add(myPlacemark)
+      }
+    }
   </script>
 </body>
 

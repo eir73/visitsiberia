@@ -79,18 +79,24 @@
     </nav>
   </header>
 
-  <main class="main" id="meal-item">
+  <main class="main" id="places-item">
     <article class="main__article article">
       <div class="article__header">
         <div class="article__description wow fadeInLeft">
-          <h1 class="article__title">Тепсей</h1>
+          <div class="article__title-wrap">
+            <h1 class="article__title">Тепсей</h1>
+            <div class="article__share">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="20px" height="20px"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>                
+            </div>
+          </div>
           <div class="article__recommendation">
-            <svg width="32" height="32" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="article__icon-recommandation" width="32" height="32" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="8" y="5.6665" width="32" height="32" fill="white"/>
               <path d="M7.02333 0L7 37.3333L28 51.3333L48.9767 37.3333L49 0H7.02333ZM23.3333 35L11.6667 23.3333L14.9567 20.02L23.3333 28.3967L41.0433 10.6867L44.3333 14L23.3333 35Z" fill="#FFB906"/>
             </svg>
-            <p class="article__recommendation-text">ТИЦ рекомендует</p>
+            <p class="article__recommendation-text" id="desc">ТИЦ рекомендует</p>
           </div>
+          <div class="article__add-to-pass">Добавить к маршруту</div>
 
           <div class="article__sign wow fadeInLeft">
             <p class="article__sign-bold">
@@ -99,7 +105,7 @@
             <p class="article__sign-bold">
               Сезон: <a href="#" class="article__link">Круглый год</a>
             </p>
-            <p class="article__information">
+            <p class="article__information article__text">
               Тепсей — величественная двуглавая гора высотой 639 метров, расположенная на правом берегу Енисея, в устье
               реки Туба. В хакасском фольклоре считается священной. Северо-восточный склон — пологий, западный и южный
               круто обрываются к Енисею и Тубе. С левобережной стороны расположен хребет Оглахты.
@@ -109,15 +115,33 @@
 
         <sidebar class="article__page-nav page-nav wow fadeInRight">
           <ul class="page-nav__list">
-            <li>Описание</li>
-            <li class="page-nav__item">Полезная информация</li>
-            <li class="page-nav__item">Фото</li>
-            <li class="page-nav__item">История</li>
-            <li class="page-nav__item">Как добраться</li>
-            <li class="page-nav__item">Отзывы</li>
-            <li class="page-nav__item">События рядом</li>
-            <li class="page-nav__item">Где остановиться</li>
-            <li class="page-nav__item">Где покушать</li>
+            <li class="page-nav__item">
+              <a href="#desc">Описание</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#info">Полезная информация</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#photo">Фото</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#story">История</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#way">Как добраться</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#reviews">Отзывы</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#events">События рядом</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#places">Где остановиться</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#meal">Где покушать</a>
+            </li>
           </ul>
           <div class="page-nav__button">
             <button class="page-nav__off">
@@ -144,7 +168,7 @@
           надписи (более 1,5 тысяч), которые вы можете увидеть, если будете внимательны. Вот уже на протяжении 150 лет
           гора Тепсей является объектом пристального изучения историков. Тепсей таит в себе еще множество загадок и
           манит их разгадать...
-          <p class="article__contact-title">
+          <p class="article__contact-title" id="info">
             Полезная информация:
           </p>
           <a href="#" class="article__contact article__link">Тепсей: молитва вечному небу. Какие тайны скрывает
@@ -153,7 +177,7 @@
         </div>
       </section>
 
-      <section class="article__slider article__block wow fadeInUp">
+      <section class="article__slider article__block wow fadeInUp" id="photo">
         <div class="swiper-container article__slider-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide d-flex flex-column align-items-center">
@@ -205,7 +229,7 @@
         </script>
       </section>
 
-      <section class="article__history article__block">
+      <section class="article__history article__block" id="story">
         <div class="article__history-block wow fadeInLeft">
           <h2 class="article__name exo">История</h2>
           <div class="article__history-text">
@@ -229,7 +253,7 @@
         </div>
       </section>
 
-      <section class="article__block article__pass">
+      <section class="article__block article__pass" id="way">
         <div class="article__pass-text">
           <h2 class="article__name wow fadeInUp">
             Как добраться
@@ -249,11 +273,11 @@
         </div>
 
         <div class="article__map-wrap">
-          <img src="/img/Rectangle126.png" alt="Map" class="article__map">
+          <div id="map"></div>
         </div>
       </section>
 
-      <section class="article__feedback article__block">
+      <section class="article__feedback article__block" id="reviews">
         <h2 class="article__name wow fadeInUp">Отзывы</h2>
         <div class="article__feedback-slider swiper-container wow fadeInUp">
           <div class="article__feedback-wr swiper-wrapper">
@@ -447,7 +471,7 @@
         </script>
       </section>
 
-      <section class="article__events article__block">
+      <section class="article__events article__block" id="events">
         <h2 class="article__name article__name-position wow fadeInUp">
           События поблизости
         </h2>
@@ -588,7 +612,7 @@
         </div>
       </section>
 
-      <section class="article__place-for-sleep article__block">
+      <section class="article__place-for-sleep article__block" id="places">
         <h2 class="article__name article__name-position wow fadeInUp">
           Где остановиться в пути
         </h2>
@@ -729,7 +753,7 @@
         </div>
       </section>
 
-      <section class="article__cafe article__block">
+      <section class="article__cafe article__block" id="meal">
         <h2 class="article__name article__name-position wow fadeInUp">
           Самые вкусные места на маршруте
         </h2>
@@ -966,6 +990,50 @@
     <script src="./js/jquery.datepick.js"></script>
     <script src="./js/index.js"></script>
   </footer>
+
+  <script>
+    $('a[href^="#"]').click(function(e) {
+    e.preventDefault()
+    var target = $(this).attr('href');
+    $('html').animate({scrollTop: $(target).offset().top - 130 }, 900);
+})
+  </script>
+
+  <script>
+    ymaps.ready(init);
+
+function init() {
+  var item = {
+    lat: 12.2345,
+    lng: 43.2345
+  }
+  var myMap = new ymaps.Map('map', {
+    center: [item.lat, item.lng],
+    zoom: 10
+  }, {
+    searchControlProvider: 'yandex#search'
+  })
+
+  var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  )
+  
+    myPlacemark = new ymaps.Placemark([item.lat, item.lng], {
+      hintContent: 'Собственный значок метки',
+      balloonContent: 'Это красивая метка'
+    }, {
+      // options
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: './img/geo.svg',
+      iconImageSize: [48, 48],
+      iconImageOffset: [-24, -24],
+      iconContentOffset: [15, 15],
+      iconContentLayout: MyIconContentLayout
+    })
+    myMap.geoObjects.add(myPlacemark)
+  
+}
+  </script>
 </body>
 
 </html>

@@ -104,9 +104,12 @@
           </select>
           <select id="fourth">
             <option disabled="disabled" selected="selected">Тип отдыха</option>
-            <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">Активно-приключенческий</option>
-            <option title=" Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">Спокойный отдых</option>
-            <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">Культурно-познавательный</option>
+            <option title="Включает осмотр природных достопримечательностей, парков, заповедников, гор, катание на лыжах, сноубордах и т.п.">
+              Активно-приключенческий</option>
+            <option title=" Включает в себя более спокойные виды отдыха, такие как отдых на озерах, вблизи рек и на Красноярском море.">
+              Спокойный отдых</option>
+            <option title="Включает в себя изучение таких направлений как Енисейск, Шушенское, Минусинск, Ачинск и Красноярск с точки зрения паломничества.">
+              Культурно-познавательный</option>
           </select>
         </div>
       </div>
@@ -358,15 +361,14 @@
               </div>
             </div>
           </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          </div>
           <div class="places__pagination pagination">
             <div class="pagination__page active">1</div>
             <div class="pagination__page">2</div>
             <div class="pagination__page">3</div>
             <div class="pagination__page">4</div>
           </div>
-        </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -469,17 +471,21 @@
   </footer>
   <script>
     $('#first').datepick({
-      onSelect: function(dates) { console.log(dates); },
-      yearRange:'c-0:c+2',
+      onSelect: function (dates) {
+        console.log(dates);
+      },
+      yearRange: 'c-0:c+2',
       firstDay: 1,
       multiSelect: 2,
       multiSeparator: ' — ',
       dateFormat: 'd M yyyyy',
       dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
       monthNamesShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн',
-     'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
-     monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 
-    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'], 
+        'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+      ],
+      monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+      ],
     });
 
     $("#second").selectmenu();
@@ -504,13 +510,12 @@
     fourth.on('selectmenuchange', e => {
       console.log(e.toElement.innerHTML)
     })
-    
   </script>
 
   <script>
     const key = 'cffbde42-9a9e-4630-b8af-50781fa386c1'
   </script>
-  
+
   <script>
     var mySwiper = new Swiper('.swiper-container', {
       spaceBetween: 76,
@@ -546,30 +551,81 @@
     })
   </script>
 
-<script>
- /* ymaps.ready(init);
+  <script>
+    ymaps.ready(init);
 
-  function init() {
-      // data.data = {{$places}}
-    var myMap = new ymaps.Map('map', {
-      center: [data.data[0].lat, data.data[0].lng],
-      zoom: 10
-    }, {
-      searchControlProvider: 'yandex#search'
-    })
+    var items = [{
+        name: 'route1',
+        items: [{
+            lat: 2.2345,
+            lng: 3.2345
+          },
+          {
+            lat: 3.43,
+            lng: 2.23
+          },
+          {
+            lat: 4.43,
+            lng: 3.23
+          }
+        ]
+      },
+      {
+        name: 'route2',
+        items: [{
+            lat: 2.2345,
+            lng: 3.2345
+          },
+          {
+            lat: 3.43,
+            lng: 2.23
+          }
+        ]
+      },
+      {
+        name: 'route3',
+        items: [{
+            lat: 12.2345,
+            lng: 43.2345
+          },
+          {
+            lat: 13.43,
+            lng: 32.23
+          }
+        ]
+      },
+    ]
 
-    var multiRoute = new ymaps.multiRouter.MultiRoute({
-      referencePoints: data.data.map(el => {
-        return [el.lat, el.lng]
-      }),
-      params: {
-        results: 1
+    function init() {
+      for (let i = 0; i < items.length; i++) {
+        let item = items[i]
+        let id = item.name
+        const domEl = document.createElement('div')
+        domEl.id = id
+        domEl.classList.add('route__map')
+        
+        document.getElementById('pills-profile').appendChild(domEl)
+
+        var myMap = new ymaps.Map(id, {
+          center: [item.items[0].lat, item.items[0].lng],
+          zoom: 10
+        }, {
+          searchControlProvider: 'yandex#search'
+        })
+
+        var multiRoute = new ymaps.multiRouter.MultiRoute({
+          referencePoints: item.items.map(el => {
+            return [el.lat, el.lng]
+          }),
+          params: {
+            results: 1
+          }
+        });
+
+        myMap.geoObjects.add(multiRoute);
       }
-    });
-
-  myMap.geoObjects.add(multiRoute);
-}*/
-</script>
+    }
+  </script>
 </body>
 
 </html>
