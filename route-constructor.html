@@ -86,14 +86,14 @@
       </div>
        <div class="constructor__results">
         <div class="constructor__result-group">
-          <div class="constructor__result-items d-flex flex-column">
+          <div class="constructor__result-items d-flex flex-column" id="sortable">
             <div class="constructor__result-item d-flex flex-row align-items-center">
               <p class="constructor__result-number mb-0 list__name exo">
                 1
               </p>
-              <p class="constructor__result-name mb-0 list__name exo">
+              <a href="#" class="constructor__result-name mb-0 list__name exo">
                 Гостинница "Огни Енисея" Музей артефактов йцуке йцук фывап ячсми
-              </p>
+              </a>
               <p class="list__city constructor__result-geo">
                 <span class="material-icons">room </span> с. Парная
               </p>
@@ -103,16 +103,17 @@
                 </span>
               </div>
               <div class="constructor__result-delete">
-                <span>Удалить</span>
+                <span class="desctp">Удалить</span>
+                <span class="material-icons mb">close</span>
               </div>
             </div>
             <div class="constructor__result-item d-flex flex-row align-items-center">
               <p class="constructor__result-number mb-0 list__name exo">
                 3
               </p>
-              <p class="constructor__result-name mb-0 list__name exo">
+              <a href="#" class="constructor__result-name mb-0 list__name exo">
                 Гостинница "Огни Енисея" Музей артефактов йцуке йцук фывап ячсми
-              </p>
+              </a>
               <p class="list__city constructor__result-geo">
                 <span class="material-icons">room </span> с. Парная
               </p>
@@ -122,16 +123,17 @@
                 </span>
               </div>
               <div class="constructor__result-delete">
-                <span>Удалить</span>
+                <span class="desctp">Удалить</span>
+                <span class="material-icons mb">close</span>
               </div>
             </div>
             <div class="constructor__result-item d-flex flex-row align-items-center">
               <p class="constructor__result-number mb-0 list__name exo">
                 2
               </p>
-              <p class="constructor__result-name mb-0 list__name exo">
+              <a href="#" class="constructor__result-name mb-0 list__name exo">
                 Гостинница "Огни Енисея" Музей артефактов йцуке йцук фывап ячсми
-              </p>
+              </a>
               <p class="list__city constructor__result-geo">
                 <span class="material-icons">room </span> с. Парная
               </p>
@@ -141,12 +143,19 @@
                 </span>
               </div>
               <div class="constructor__result-delete">
-                <span>Удалить</span>
+                <span class="desctp">Удалить</span>
+                <span class="material-icons mb">close</span>
               </div>
             </div>
           </div>
         </div>
        </div> 
+       <script>
+        $( function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+        } );
+        </script>
        <section class="page__route">
         <div class="page__route-item">
           <div class="page__route-img-wr">
