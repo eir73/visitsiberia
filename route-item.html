@@ -89,7 +89,7 @@
               <rect x="8" y="5.6665" width="32" height="32" fill="white"/>
               <path d="M7.02333 0L7 37.3333L28 51.3333L48.9767 37.3333L49 0H7.02333ZM23.3333 35L11.6667 23.3333L14.9567 20.02L23.3333 28.3967L41.0433 10.6867L44.3333 14L23.3333 35Z" fill="#FFB906"/>
             </svg>
-            <p class="article__recommendation-text">ТИЦ рекомендует</p>
+            <p class="article__recommendation-text" id="desc">ТИЦ рекомендует</p>
           </div>
 
           <div class="article__sign wow fadeInLeft">
@@ -109,15 +109,33 @@
 
         <sidebar class="article__page-nav page-nav wow fadeInRight">
           <ul class="page-nav__list">
-            <li>Описание</li>
-            <li class="page-nav__item">Полезная информация</li>
-            <li class="page-nav__item">Фото</li>
-            <li class="page-nav__item">История</li>
-            <li class="page-nav__item">Как добраться</li>
-            <li class="page-nav__item">Отзывы</li>
-            <li class="page-nav__item">События рядом</li>
-            <li class="page-nav__item">Где остановиться</li>
-            <li class="page-nav__item">Где покушать</li>
+            <li class="page-nav__item">
+              <a href="#desc">Описание</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#info">Полезная информация</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#photo">Фото</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#story">Условия</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#way">Как добраться</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#reviews">Отзывы</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#events">События рядом</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#places">Где остановиться</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#meal">Где покушать</a>
+            </li>
           </ul>
           <div class="page-nav__button">
             <button class="page-nav__off">
@@ -134,7 +152,7 @@
           <a href="#" class="page-nav__link-map">Перейти к маршруту</a>
         </sidebar>
       </div>
-      <section class="page__route">
+      <section class="page__route" id="photo">
         <div class="page__route-item">
           <div class="page__route-img-wr">
             <img src="./img/item-slider-img2.jpg" alt="">
@@ -196,7 +214,7 @@
           </a>
         </div>
       </section>
-      <section class="article__info">
+      <section class="article__info" id="info">
         <div class="article__img-wr wow fadeInUp">
           <img src="./img/Tepsey-img1.png" alt="article__image">
         </div>
@@ -215,7 +233,7 @@
         </div>
       </section>
 
-      <section class="article__history article__block">
+      <section class="article__history article__block" id="story">
         <div class="article__history-block wow fadeInLeft">
           <h2 class="article__name exo">История</h2>
           <div class="article__history-text">
@@ -239,7 +257,7 @@
         </div>
       </section>
 
-      <section class="article__block article__pass">
+      <section class="article__block article__pass" id="way">
         <div class="article__pass-text">
           <h2 class="article__name wow fadeInUp">
             Как добраться
@@ -263,7 +281,7 @@
         </div>
       </section>
 
-      <section class="article__feedback article__block">
+      <section class="article__feedback article__block" id="reviews">
         <h2 class="article__name wow fadeInUp">Отзывы</h2>
         <div class="article__feedback-slider swiper-container wow fadeInUp">
           <div class="article__feedback-wr swiper-wrapper">
@@ -457,7 +475,7 @@
         </script>
       </section>
 
-      <section class="article__events article__block">
+      <section class="article__events article__block" id="events">
         <h2 class="article__name article__name-position wow fadeInUp">
           События поблизости
         </h2>
@@ -598,7 +616,7 @@
         </div>
       </section>
 
-      <section class="article__place-for-sleep article__block">
+      <section class="article__place-for-sleep article__block" id="places">
         <h2 class="article__name article__name-position wow fadeInUp">
           Где остановиться в пути
         </h2>
@@ -739,7 +757,7 @@
         </div>
       </section>
 
-      <section class="article__cafe article__block">
+      <section class="article__cafe article__block" id="meal">
         <h2 class="article__name article__name-position wow fadeInUp">
           Самые вкусные места на маршруте
         </h2>
@@ -990,7 +1008,7 @@
     ymaps.ready(init);
   
     function init() {
-        let route = [{lat: 12.23, lng: 12.34}, {lat:12.32, lng: 12.6}]
+        let route = [{lat: 52.23, lng: 12.34}, {lat:52.32, lng: 12.6}]
       var myMap = new ymaps.Map('map', {
         center: [route[0].lat, route[0].lng],
         zoom: 10
