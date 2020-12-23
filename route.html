@@ -606,6 +606,8 @@
         
         document.getElementById('pills-profile').appendChild(domEl)
 
+        
+
         var myMap = new ymaps.Map(id, {
           center: [item.items[0].lat, item.items[0].lng],
           zoom: 10
@@ -613,10 +615,18 @@
           searchControlProvider: 'yandex#search'
         })
 
+        // проблема -- item.items = {0: {}, 1:{}, ...}
+        // решение --
+        let points = []
+        for (let idx = 0; idx < Object.keys(item.items).length; idx++) {
+          let lat = item.items[idx].lat
+          let lng = item.items[idx].lng
+
+          points.push([lat, lng])
+        }
+
         var multiRoute = new ymaps.multiRouter.MultiRoute({
-          referencePoints: item.items.map(el => {
-            return [el.lat, el.lng]
-          }),
+          referencePoints: points,
           params: {
             results: 1
           }
