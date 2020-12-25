@@ -339,6 +339,17 @@
         lng: 32.23
       }
     ]
+
+    var otherItems = [{
+        lat: 12.5,
+        lng: 43.5
+      },
+      {
+        lat: 13.3,
+        lng: 32.3
+      }
+    ]
+
     var myMap = new ymaps.Map('map', {
       center: [items[0].lat, items[0].lng],
       zoom: 10
@@ -366,6 +377,27 @@
       })
       myMap.geoObjects.add(myPlacemark)
     }
+
+//new code
+    for (let j = 0; j < otherItems.length; j++) {
+      let item = otherItems[j]
+
+      myPlacemark = new ymaps.Placemark([item.lat, item.lng], {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка'
+      }, {
+        // options
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: './img/Ygeo.svg',
+        iconImageSize: [48, 48],
+        iconImageOffset: [-24, -24],
+        iconContentOffset: [15, 15],
+        iconContentLayout: MyIconContentLayout
+      })
+      myMap.geoObjects.add(myPlacemark)
+    }
+
+    //end of new code
   }
 </script>
 </body>

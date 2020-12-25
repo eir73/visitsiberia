@@ -573,7 +573,14 @@
             lat: 4.43,
             lng: 3.23
           }
-        ]
+        ],
+        otherItems: [{
+          lat: 2.5,
+          lng: 3.5
+        }, {
+          lat: 2.5,
+          lng: 3.23
+        }]
       },
       {
         name: 'route2',
@@ -585,7 +592,14 @@
             lat: 3.43,
             lng: 2.23
           }
-        ]
+        ],
+        otherItems: [{
+          lat: 2.5,
+          lng: 3.5
+        }, {
+          lat: 2.5,
+          lng: 3.23
+        }]
       },
       {
         name: 'route3',
@@ -597,7 +611,14 @@
             lat: 13.43,
             lng: 32.23
           }
-        ]
+        ],
+        otherItems: [{
+          lat: 2.5,
+          lng: 3.5
+        }, {
+          lat: 2.5,
+          lng: 3.23
+        }]
       },
     ]
 
@@ -629,6 +650,31 @@
 
           points.push([lat, lng])
         }
+
+// new code for items
+        var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        )
+
+        for (let k = 0; k < item.otherItems.length; k++) {
+          let Item = item.otherItems[k]
+
+          myPlacemark = new ymaps.Placemark([Item.lat, Item.lng], {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+          }, {
+            // options
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: './img/Ygeo.svg',
+            iconImageSize: [48, 48],
+            iconImageOffset: [-24, -24],
+            iconContentOffset: [15, 15],
+            iconContentLayout: MyIconContentLayout
+          })
+          myMap.geoObjects.add(myPlacemark)
+        }
+
+        // end of new code
 
         var multiRoute = new ymaps.multiRouter.MultiRoute({
           referencePoints: points,
