@@ -1854,6 +1854,7 @@ button.datepick-cmd {
     line-height: 20px;
   }
 }
+.list__subrating[data-rating="0"] .material-icons,
 .list__subrating[data-rating="1"] .material-icons,
 .list__subrating[data-rating="2"] .material-icons,
 .list__subrating[data-rating="3"] .material-icons,
@@ -2805,6 +2806,66 @@ button.datepick-cmd {
   background: #f2f6f9;
   border-radius: 15px;
 }
+.feedback__row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+.feedback__col {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  width: 100%;
+}
+#comment-text {
+  width: 100%;
+}
+.feedback__row input,
+.feedback__row input:focus,
+.feedback__row textarea,
+.feedback__row textarea:focus {
+  border: 2px solid #C4C4C4 !important;
+border-radius: 15px !important;
+margin-bottom: 24px;
+padding: 8px 15px;
+font-size: 24px;
+}
+.feedback__col p {
+  font-size: 24px;
+  justify-content: flex-end;
+}
+.feedback__row .feedback__star {
+  margin: 0;
+}
+.feedback__row .feedback__stars {
+  justify-content: flex-end;
+  user-select: none;
+}
+.dn {
+  display: none !important;
+}
+@media screen and (max-width: 992px) {
+  .feedback__col {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .feedback__col p {
+    font-size: 18px;
+  }
+  #form .article__get-feedback {
+    margin-top: 70px;
+  }
+  .feedback__row input, .feedback__row textarea {
+    font-size: 18px;
+    padding: 4px 12px;
+  }
+  .feedback__col  .list__subrating .material-icons  {
+    font-size: 20px !important;
+  }
+  .feedback__row .feedback__stars, .feedback__col p {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 576px) {
   .article__get-feedback {
     font-size: 14px;
@@ -3069,6 +3130,9 @@ button.datepick-cmd {
 .feedback__text {
   font-weight: 300;
   line-height: 106%;
+}
+.no-comments p {
+ padding: 0 20px;
 }
 @media screen and (max-width: 576px) {
   .feedback__text {

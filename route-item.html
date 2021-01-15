@@ -283,11 +283,44 @@
 
       <section class="article__feedback article__block" id="reviews">
         <h2 class="article__name wow fadeInUp">Отзывы</h2>
-        <div class="article__feedback-slider swiper-container wow fadeInUp">
+        <div class="no-comments dn">
+          <p class="article__slider-description exo">Еще нет отзывов, вы можете оставить первый отзыв о событии</p>
+        </div>
+        <div id="form" class="dn">
+          <form action="" POST>
+            <div class="feedback__row">
+              <div class="feedback__col">
+                <input type="text" name="name" placeholder="Введите имя">
+                <input type="tel" name="tel" placeholder="Номер телефона">
+                <input type="email" name="email" placeholder="Электронная почта @mail">
+              </div>
+              <div class="feedback__col">
+                <div class="list__subrating d-flex mb-0 feedback__stars" data-rating="0">
+                  <span class="material-icons feedback__star">star</span>
+                  <span class="material-icons feedback__star">star</span>
+                  <span class="material-icons feedback__star">star</span>
+                  <span class="material-icons feedback__star">star</span>
+                  <span class="material-icons feedback__star">star</span>
+                </div>
+                <p class="d-flex">Оценка от 1 до 5 баллов</p>
+              </div>
+            </div>
+            <div class="feedback__row">
+              <textarea name="comment" id="comment-text" cols="30" rows="5"
+                maxlength="500"
+              >Текст вашего отзыва</textarea>
+            </div>
+            <button id="button-submit" type="submit" class="article__get-feedback">
+              Оставить отзыв
+            </button>
+          </form>
+        </div>
+        <div id="com">
+          <div class="article__feedback-slider swiper-container wow fadeInUp">
           <div class="article__feedback-wr swiper-wrapper">
             <div class="feedback swiper-slide">
               <div class="feedback__img-wr">
-                <img src="/img/feedback.png" alt="Image feedback" class="feedback__img">
+                <img src="./img/feedback.png" alt="Image feedback" class="feedback__img">
               </div>
               <p class="feedback__name">Королёв В.</p>
               <p class="feedback__data">3 октября 2020</p>
@@ -328,7 +361,7 @@
             </div>
             <div class="feedback swiper-slide">
               <div class="feedback__img-wr">
-                <img src="/img/feedback.png" alt="Image feedback" class="feedback__img">
+                <img src="./img/feedback.png" alt="Image feedback" class="feedback__img">
               </div>
               <p class="feedback__name">Королёв В.</p>
               <p class="feedback__data">3 октября 2020</p>
@@ -369,7 +402,7 @@
             </div>
             <div class="feedback swiper-slide">
               <div class="feedback__img-wr">
-                <img src="/img/feedback.png" alt="Image feedback" class="feedback__img">
+                <img src="./img/feedback.png" alt="Image feedback" class="feedback__img">
               </div>
               <p class="feedback__name">Королёв В.</p>
               <p class="feedback__data">3 октября 2020</p>
@@ -410,7 +443,7 @@
             </div>
             <div class="feedback swiper-slide">
               <div class="feedback__img-wr">
-                <img src="/img/feedback.png" alt="Image feedback" class="feedback__img">
+                <img src="./img/feedback.png" alt="Image feedback" class="feedback__img">
               </div>
               <p class="feedback__name">Королёв В.</p>
               <p class="feedback__data">3 октября 2020</p>
@@ -450,12 +483,13 @@
               </div>
             </div>
           </div>
+          </div>
+          <div class="swiper-button-prev swiper-button"></div>
+          <div class="swiper-button-next swiper-button"></div>
+          <button type="button" id="button-add" class="article__get-feedback">
+            Оставить отзыв
+          </button>
         </div>
-        <div class="swiper-button-prev swiper-button"></div>
-        <div class="swiper-button-next swiper-button"></div>
-        <button type="button" class="article__get-feedback">
-          Оставить отзыв
-        </button>
         <script>
           const swiper0 = new Swiper('.article__feedback-slider', {
             spaceBetween: 93,
@@ -472,6 +506,32 @@
               }
             }
           })
+        </script>
+        <script>
+          let buttonAdd = document.getElementById('button-add')
+          let buttonSub = document.getElementById('button-submit')
+          let form = document.getElementById('form')
+          let comments = document.getElementById('com')
+
+          buttonAdd.onclick = () => {
+            comments.classList.add('dn')
+            form.classList.remove('dn')
+
+          }
+
+          buttonSub.onclick = () => {
+            comments.classList.remove('dn')
+            form.classList.add('dn')
+          }
+
+          let stars = Array.from(document.querySelectorAll('.feedback__col .feedback__star'))
+          let starsWr = document.querySelector('.feedback__col .feedback__stars')
+
+          for (let i = 0; i < stars.length; i++) {
+            stars[i].onclick = (e) => {
+              starsWr.dataset.rating = stars.indexOf(stars[i]) + 1
+            }
+          }
         </script>
       </section>
 
