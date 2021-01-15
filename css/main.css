@@ -234,7 +234,7 @@ button.datepick-cmd {
   padding: 14px 80px;
   background-color: #fff;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1640px) {
   .navbar {
     max-width: 100%;
     padding: 14px 0;
@@ -263,13 +263,13 @@ button.datepick-cmd {
 .header__buttons {
   display: none;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .header__buttons {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .header__helpers {
     display: none;
   }
@@ -277,12 +277,12 @@ button.datepick-cmd {
 .header__mobile {
   display: none;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .header__mobile {
     display: flex;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .header .navbar-nav {
     align-items: center;
   }
@@ -303,10 +303,10 @@ button.datepick-cmd {
   padding-left: 7px;
   padding-right: 7px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1480px) {
   .header .nav-item {
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -320,6 +320,30 @@ button.datepick-cmd {
   font-size: 24px;
   line-height: 30px;
   color: #011b2b;
+}
+.header .nav-link.nav-link--blue {
+  display: flex;
+  color: #599CC1;
+}
+@media (min-width: 1200px) {
+.navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: .4rem;
+    padding-left: .4rem;
+}
+}
+.header .nav-link.nav-link--blue .nav-counter {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  align-items: center;
+  min-width: 27px;
+  min-height: 27px;
+  max-width: 27px;
+  max-height: 27px;
+  margin-right: 5px;
+  background-color:  #599CC1;
+  color: #fff;
+  border-radius: 30px;
 }
 .header .nav-link.active {
   text-decoration: line-through;
@@ -2843,6 +2867,12 @@ font-size: 24px;
 }
 .dn {
   display: none !important;
+}
+.mb-182 {
+  margin-bottom: 182px;
+}
+.mb-364 {
+  margin-bottom: 364px;
 }
 @media screen and (max-width: 992px) {
   .feedback__col {
