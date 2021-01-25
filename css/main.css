@@ -4320,4 +4320,12 @@ svg {
 .modal__icon:not(:last-child) {
   margin-right: 21px;
 }
+
+.page-nav__off.active {
+  background-color: #c7f2a5;
+}
+
+.page-nav__off.active .material-icons {
+  color: #011b2b;
+}
 /*# sourceMappingURL=main.css.map */
