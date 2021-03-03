@@ -1,3 +1,180 @@
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Thin.eot');
+	src: local('../fonts/Geometria Thin'), local('../fonts/Geometria-Thin'),
+		url('../fonts/Geometria-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Thin.woff') format('woff'),
+		url('../fonts/Geometria-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-MediumItalic.eot');
+	src: local('../fonts/Geometria MediumItalic'), local('../fonts/Geometria-MediumItalic'),
+		url('../fonts/Geometria-MediumItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-MediumItalic.woff') format('woff'),
+		url('../fonts/Geometria-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Italic.eot');
+	src: local('../fonts/Geometria Italic'), local('../fonts/Geometria-Italic'),
+		url('../fonts/Geometria-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Italic.woff') format('woff'),
+		url('../fonts/Geometria-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Heavy.eot');
+	src: local('../fonts/Geometria Heavy'), local('../fonts/Geometria-Heavy'),
+		url('../fonts/Geometria-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Heavy.woff') format('woff'),
+		url('../fonts/Geometria-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-ExtraBoldItalic.eot');
+	src: local('../fonts/Geometria ExtraBoldItalic'), local('../fonts/Geometria-ExtraBoldItalic'),
+		url('../fonts/Geometria-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-ExtraBoldItalic.woff') format('woff'),
+		url('../fonts/Geometria-ExtraBoldItalic.ttf') format('truetype');
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Medium.eot');
+	src: local('../fonts/Geometria Medium'), local('../fonts/Geometria-Medium'),
+		url('../fonts/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Medium.woff') format('woff'),
+		url('../fonts/Geometria-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-BoldItalic.eot');
+	src: local('../fonts/Geometria BoldItalic'), local('../fonts/Geometria-BoldItalic'),
+		url('../fonts/Geometria-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-BoldItalic.woff') format('woff'),
+		url('../fonts/Geometria-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-LightItalic.eot');
+	src: local('../fonts/Geometria LightItalic'), local('../fonts/Geometria-LightItalic'),
+		url('../fonts/Geometria-LightItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-LightItalic.woff') format('woff'),
+		url('../fonts/Geometria-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-HeavyItalic.eot');
+	src: local('../fonts/Geometria HeavyItalic'), local('../fonts/Geometria-HeavyItalic'),
+		url('../fonts/Geometria-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-HeavyItalic.woff') format('woff'),
+		url('../fonts/Geometria-HeavyItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria.eot');
+	src: local('../fonts/Geometria'),
+		url('../fonts/Geometria.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria.woff') format('woff'),
+		url('../fonts/Geometria.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Bold.eot');
+	src: local('../fonts/Geometria Bold'), local('../fonts/Geometria-Bold'),
+		url('../fonts/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Bold.woff') format('woff'),
+		url('../fonts/Geometria-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-ExtraBold.eot');
+	src: local('../fonts/Geometria ExtraBold'), local('../fonts/Geometria-ExtraBold'),
+		url('../fonts/Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-ExtraBold.woff') format('woff'),
+		url('../fonts/Geometria-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-ThinItalic.eot');
+	src: local('../fonts/Geometria ThinItalic'), local('../fonts/Geometria-ThinItalic'),
+		url('../fonts/Geometria-ThinItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-ThinItalic.woff') format('woff'),
+		url('../fonts/Geometria-ThinItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-ExtraLightItalic.eot');
+	src: local('../fonts/Geometria ExtraLightItalic'), local('../fonts/Geometria-ExtraLightItalic'),
+		url('../fonts/Geometria-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-ExtraLightItalic.woff') format('woff'),
+		url('../fonts/Geometria-ExtraLightItalic.ttf') format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Light.eot');
+	src: local('../fonts/Geometria Light'), local('../fonts/Geometria-Light'),
+		url('../fonts/Geometria-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Light.woff') format('woff'),
+		url('../fonts/Geometria-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-ExtraLight.eot');
+	src: local('../fonts/Geometria ExtraLight'), local('../fonts/Geometria-ExtraLight'),
+		url('../fonts/Geometria-ExtraLight.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-ExtraLight.woff') format('woff'),
+		url('../fonts/Geometria-ExtraLight.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
 .datepick {
   background-color: #fff;
   color: #000;
@@ -230,9 +407,10 @@ button.datepick-cmd {
   clear: both;
 }
 .navbar {
-  height: 74px;
-  padding: 14px 80px;
+  height: 96px;
+  padding: 25px 80px;
   background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 1640px) {
   .navbar {
@@ -346,7 +524,7 @@ button.datepick-cmd {
   border-radius: 30px;
 }
 .header .nav-link.active {
-  text-decoration: underline;
+  color: #0090CC;
 }
 .footer {
   margin: 15px;
@@ -1668,12 +1846,12 @@ button.datepick-cmd {
   background-color: #fff;
 }
 .ui-widget {
-  font-family: "Source Sans Pro", sans-serif !important;
+  font-family: "Geometria", sans-serif !important;
 }
 .ui-widget.ui-widget-content {
   margin-top: -1px;
   max-height: 260px;
-  font-family: "Source Sans Pro", sans-serif !important;
+  font-family: "Geometria", sans-serif !important;
   padding-bottom: 5px;
   border: none !important;
   outline: 0 !important;
@@ -4100,12 +4278,12 @@ table.ui-datepicker-calendar {
   color: #fff;
 }
 .exo {
-  font-family: "Exo 2", sans-serif;
+  font-family: "Geometria", sans-serif;
 }
 body {
   min-height: 100vh;
-  padding-top: 74px;
-  font-family: "Source Sans Pro", sans-serif;
+  padding-top: 96px;
+  font-family: "Geometria", sans-serif;
   cursor: default;
 }
 main {
@@ -4225,7 +4403,7 @@ a:not(.nop):hover {
   font-weight: 400;
   font-size: 24px;
   line-height: 22px;
-  text-decoration: underline;
+  color: #0090CC;
   color: #000;
 }
 @media screen and (max-width: 576px) {
