@@ -175,6 +175,29 @@
 	font-style: normal;
 }
 
+.article__border-light {
+  background: #DEE4EA;
+  border-radius: 15px;
+  width: 100%;
+  padding: 57px 63px;
+}
+
+.article__border-light ul li {
+  font-size: 24px;
+  line-height: 38px;
+}
+
+.article__border-light ul {
+  padding-left: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .article__border-light {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .datepick {
   background-color: #fff;
   color: #000;
